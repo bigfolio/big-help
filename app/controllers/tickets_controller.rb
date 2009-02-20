@@ -23,6 +23,16 @@ class TicketsController < ApplicationController
     end
   end
 
+  def research
+    @ticket = Ticket.find(params[:id])
+    @ticket.research!
+    
+    respond_to do |format|
+      # format.html { redirect_to(tickets_url) }
+      format.js
+    end
+  end
+
   # GET /tickets/new
   # GET /tickets/new.xml
   def new

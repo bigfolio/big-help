@@ -5,7 +5,9 @@
     <li>by <%= mail_to ticket.email, ticket.name %></li>
     <li>account: <%= link_to ticket.domain, ticket.domain.match('http://') ? ticket.domain : 'http://'+ticket.domain %></li>
     <li><%= link_to ticket.category.name, ticket.category %></li>
-    <li><%= link_to 'View', ticket %></li>
     <li><%= link_to 'Delete', ticket, :confirm => 'Are you sure?', :method => :delete %></li>
+    <% if ticket.state == 'fresh' %>
+    <li id="<%= "researching_#{ticket.id}" %>"+><%= link_to_remote "I'm working on this", :url => research_ticket_path(ticket) %></li>
+    <% end %>
   </ul>
 <% end %>

@@ -45,7 +45,7 @@ class FaqsController < ApplicationController
     respond_to do |format|
       if @faq.save
         flash[:notice] = 'Faq was successfully created.'
-        format.html { redirect_to(@faq) }
+        format.html { redirect_to(faqs_url) }
         format.xml  { render :xml => @faq, :status => :created, :location => @faq }
       else
         format.html { render :action => "new" }

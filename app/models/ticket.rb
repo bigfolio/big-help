@@ -11,12 +11,16 @@ class Ticket < ActiveRecord::Base
   state :closed
   
   before_create :generate_key
+
+  event :research do 
+      transitions :from => :fresh, :to => :researching
+  end
   
   def classes
     klass = self.urgent ? self.state + ' urgent' : self.state
   end
   
-
+  
   protected
   
   def generate_key

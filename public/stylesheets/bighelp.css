@@ -162,7 +162,7 @@ div.ticket a, div.ticket a:link, div.ticket a:hover {
 	text-decoration: none;
 	color:#006666;
 }
-div.ticket h3 span {
+div.ticket h3 span, div.category h3 span, div.faq h3 span {
 	color:#999;
 	font-size:.8em;
 	margin-left:12px;

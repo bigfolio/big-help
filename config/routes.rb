@@ -8,13 +8,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :faqs
 
-  map.resources :tickets, :has_many => :messages, :collection => {:fresh => :get}
+  map.resources :tickets, :has_many => :messages, :collection => {:fresh => :get}, :member => {:research => :any}
 
   map.faqs_by_category '/help/faqs/:id', :controller => 'help', :action => 'faqs'
   
   map.view_by_key '/help/view/:key', :controller => 'help', :action => 'view_by_key'
   map.key_search '/help/key_search', :controller => 'help', :action => 'search_by_key'
   map.search '/help/search', :controller => 'help', :action => 'search'
+  
   
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'

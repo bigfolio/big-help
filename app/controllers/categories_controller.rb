@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.xml
   def index
     @categories = Category.find(:all)
-
+    @category = Category.new
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
@@ -47,6 +47,7 @@ class CategoriesController < ApplicationController
         flash[:notice] = 'Category was successfully created.'
         format.html { redirect_to(@category) }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }

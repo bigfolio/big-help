@@ -1,3 +1,7 @@
-<p>
+<% div_for faq, :class => 'faq' do %>
+<h3>
   <%= link_to(faq.title, faq.url.blank? ? faq : faq.url, :rel => faq.url.blank? ? 'facebox' : '_blank') %> 
-  <%= link_to('edit', edit_faq_url(faq)) if current_user %></p>
+  <span><%= link_to('edit', edit_faq_url(faq)) if current_user %>
+  <%= link_to('delete', faq, :confirm => 'Are you sure?', :method => :delete) if current_user %></span>
+</h3>
+<% end %>
