@@ -1,0 +1,3 @@
+<p>
+  <%= link_to(faq.title, faq.url.blank? ? faq : faq.url, :rel => faq.url.blank? ? 'facebox' : '_blank') %> 
+  <%= link_to('edit', edit_faq_url(faq)) if current_user %></p>

@@ -15,7 +15,6 @@ class HelpController < ApplicationController
   
   def view_by_key
     @ticket = Ticket.find_by_key(params[:key])
-    render :text => @ticket.subject
   end
   
   def search_by_key

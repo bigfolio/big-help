@@ -1,24 +1,10 @@
-<h1>Listing faqs</h1>
+<h2>FAQs <% if current_user %><span><%= link_to 'new faq', new_faq_path %></span><% end %></h2>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Category</th>
-  </tr>
+<%= render :partial => 'help/faq', :collection => @faqs %>
 
-<% for faq in @faqs %>
-  <tr>
-    <td><%=h faq.title %></td>
-    <td><%=h faq.body %></td>
-    <td><%=h faq.category_id %></td>
-    <td><%= link_to 'Show', faq %></td>
-    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
-    <td><%= link_to 'Destroy', faq, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New faq', new_faq_path %>
+<script type="text/javascript">
+  $('a[rel*=facebox]').facebox({
+    loading_image : 'loading.gif',
+    close_image   : 'closelabel.gif'
+  }) 
+</script>

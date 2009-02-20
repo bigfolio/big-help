@@ -124,7 +124,10 @@ div#left label {
 	color:green;
 	line-height:1.5em;
 }
-div#left p.tip {
+div#left label.emergency {
+	color:orange;
+}
+div#left .tip {
 	color:#666;
 	font-style: italic;
 	text-align: justify;

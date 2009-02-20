@@ -5,12 +5,9 @@
   <p>Here are some frequently asked questions for this product/category.<br />
     Take a look real quick.</p>
 
-  <% for faq in @faqs %>
-
-  <p><%= link_to(faq.title, faq.url.blank? ? faq : faq.url, :rel => faq.url.blank? ? 'facebox' : '_blank') %></p>
-
-  <% end %>
-
+  
+  <%= render :partial => 'help/faq', :collection => @faqs %>
+  
   <script type="text/javascript">
     $('a[rel*=facebox]').facebox({
       loading_image : 'loading.gif',

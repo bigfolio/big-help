@@ -27,7 +27,7 @@
 
   <fieldset>
     <legend>How can we help?</legend>
-    <p><%= f.check_box :urgent %> <%= f.label :urgent, 'this is an urgent request'%></p>
+    <p><%= f.check_box :urgent %> <%= f.label :urgent, 'this is an emergency', :class=>'emergency' %> <span class="tip">(site or email down)</span></p>
     <p>
       <%= f.label :category_id, 'Product or category' %><br />
       

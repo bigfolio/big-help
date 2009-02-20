@@ -1,30 +1,29 @@
 <% content_for :head do %>
 <%= javascript_include_tag :fckeditor %>
 <% end %>
-<h2>Ticket <%=h @ticket.key %> <span><%= link_to 'customer view', view_by_key_url(@ticket.key) %></span></h2>
+<h2>Ticket <%=h @ticket.key %> <% if current_user %><span><%= link_to 'staff reply', ticket_url(@ticket) %></span><% end %></h2>
 
 <h3><%=h @ticket.subject %> <span>(<%=h @ticket.category.name %>)</span></h3>
 
 <div class="ticket_body">
   <p class="timestamp">On <%= @ticket.created_at.to_s(:short) %> <%= mail_to @ticket.email, @ticket.name %> of <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %> wrote:</p>
   <%=h @ticket.body %>
-
-<p><b>U:</b> <%=h @ticket.username %> / <b>P:</b> <%=h @ticket.password %></p>
+  
 
 </div>
 
-<h3>Messages</h3>
+<h3>Replies</h3>
 <%= '<p>There are no additional messages for this ticket</p>' if @ticket.messages.blank? %>
 <%= render :partial => @ticket.messages %>
 
-<h3>Reply to this ticket</h3>
+<h3>Add a reply to this ticket</h3>
 
 
 <% form_for [@ticket, Message.new], :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
 
-  <%= fckeditor_textarea(:message, :body, :toolbarSet => 'Basic', :width => '90%', :height => '400px') %>
+  <%= f.text_area(:body, :width => '90%') %>
   
   
   <p>
