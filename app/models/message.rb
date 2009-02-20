@@ -8,5 +8,8 @@ class Message < ActiveRecord::Base
     :url => "/uploads/:attachment/:id/:basename.:extension"
     
   
+  def classes
+    klass = self.user ? 'staff_message' : 'customer_message'
+  end
   
 end

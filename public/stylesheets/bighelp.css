@@ -176,12 +176,38 @@ div.fresh {
 div.ticket_body {
 	background:#eed;
 	border-left:1px solid #998;
-	width:75%;
+	width:85%;
 	padding:6px;
 }
-div.ticket_body p.timestamp {
+div.ticket_body p.timestamp, div.message p.timestamp {
 	color:#998;
 	font-style: italic;
+}
+div.staff_message {
+	background:#ede;
+	border-left:1px solid #998;
+	width:85%;
+	padding:6px;
+	margin-bottom: 12px;
+	overflow:auto;
+}
+div.customer_message {
+	background:#eed;
+	border-left:1px solid #998;
+	width:85%;
+	padding:6px;
+	margin-bottom: 12px;
+}
+div.attachment a {
+	display:block;
+	height:48px;
+	line-height:48px;
+	padding-left:60px;
+	font-size:1.5em;
+	background: transparent url(../images/package.png) no-repeat center left;
+}
+div.attachment a:hover {
+	background-color:yellow;
 }
 
 

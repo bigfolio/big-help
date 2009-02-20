@@ -1,0 +1,13 @@
+<% div_for message, :class => message.classes do %>
+  <p class="timestamp">On <%= message.created_at.to_s(:short) %> 
+    <%= message.user ? message.user.name : 'someone' %> 
+    wrote:</p>
+    
+    <div class="message_body"><%= message.body %></div>
+    
+    <% if message.attachment.file? %>
+    <div class="attachment">
+    <%= link_to message.attachment_file_name, message.attachment.url %>
+    </div>
+    <% end %>
+<% end %>
