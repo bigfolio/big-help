@@ -1,0 +1,33 @@
+<p>
+  <b>Body:</b>
+  <%=h @message.body %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @message.user_id %>
+</p>
+
+<p>
+  <b>Attachment file name:</b>
+  <%=h @message.attachment_file_name %>
+</p>
+
+<p>
+  <b>Attachment content type:</b>
+  <%=h @message.attachment_content_type %>
+</p>
+
+<p>
+  <b>Attachment file size:</b>
+  <%=h @message.attachment_file_size %>
+</p>
+
+<p>
+  <b>Attachment uploaded at:</b>
+  <%=h @message.attachment_uploaded_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

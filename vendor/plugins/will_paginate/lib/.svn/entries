@@ -1,0 +1,31 @@
+8
+
+dir
+38
+svn+clientsssh://67.207.134.79/home/erik/repos/clients/trunk/vendor/plugins/will_paginate/lib
+svn+clientsssh://67.207.134.79/home/erik/repos/clients
+
+
+
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+
+svn:special svn:externals svn:needs-lock
+
+will_paginate
+dir
+
+will_paginate.rb
+file
+
+
+
+
+2008-04-03T15:05:43.000000Z
+d71be99cce4ebb8dff75ec4dbf3f5963
+2008-06-12T16:44:14.421813Z
+15
+erik
+

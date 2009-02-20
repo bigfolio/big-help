@@ -1,0 +1,11 @@
+<% div_for ticket, :class => ticket.classes do %>
+  <h3><%= link_to ticket.subject, ticket %> <span><%= time_ago_in_words ticket.created_at %> ago</span></h3>
+  <ul class='ticket_info'>
+    <li></li>
+    <li>by <%= mail_to ticket.email, ticket.name %></li>
+    <li>account: <%= link_to ticket.domain, ticket.domain.match('http://') ? ticket.domain : 'http://'+ticket.domain %></li>
+    <li><%= link_to ticket.category.name, ticket.category %></li>
+    <li><%= link_to 'View', ticket %></li>
+    <li><%= link_to 'Delete', ticket, :confirm => 'Are you sure?', :method => :delete %></li>
+  </ul>
+<% end %>

@@ -1,0 +1,21 @@
+<h2>Current Categories <span><%= link_to 'new category', new_category_path %></span></h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for category in @categories %>
+  <tr>
+    <td><%=h category.name %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'FAQs', category_faqs_url(category) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

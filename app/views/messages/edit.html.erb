@@ -1,0 +1,36 @@
+<h1>Editing message</h1>
+
+<% form_for(@message) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :attachment_file_name %><br />
+    <%= f.text_field :attachment_file_name %>
+  </p>
+  <p>
+    <%= f.label :attachment_content_type %><br />
+    <%= f.text_field :attachment_content_type %>
+  </p>
+  <p>
+    <%= f.label :attachment_file_size %><br />
+    <%= f.text_field :attachment_file_size %>
+  </p>
+  <p>
+    <%= f.label :attachment_uploaded_at %><br />
+    <%= f.datetime_select :attachment_uploaded_at %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @message %> |
+<%= link_to 'Back', messages_path %>

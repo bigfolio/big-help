@@ -1,0 +1,64 @@
+8
+
+dir
+38
+svn+clientsssh://67.207.134.79/home/erik/repos/clients/trunk/vendor/plugins/will_paginate/test/lib
+svn+clientsssh://67.207.134.79/home/erik/repos/clients
+
+
+
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+
+svn:special svn:externals svn:needs-lock
+
+activerecord_test_connector.rb
+file
+
+
+
+
+2008-01-29T02:33:36.000000Z
+db00acb1047584f059ca9cf85602c13b
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+html_inner_text.rb
+file
+
+
+
+
+2008-01-28T22:26:54.000000Z
+e72280dd5e53a76056fffe6a0a5d2e79
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+activerecord_test_case.rb
+file
+
+
+
+
+2008-01-28T22:26:59.000000Z
+7d071a86665e5b9c1a798cf6f451f2f3
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+load_fixtures.rb
+file
+
+
+
+
+2007-10-06T18:34:55.000000Z
+bd9436fdd3c176ba925e8aad51dde6ef
+2008-06-12T16:44:14.421813Z
+15
+erik
+

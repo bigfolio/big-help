@@ -1,0 +1,52 @@
+<% content_for :head do %>
+<%= javascript_include_tag :fckeditor %>
+<% end %>
+<h2>Ticket <%=h @ticket.key %> <span><%= link_to 'customer view', view_by_key_url(@ticket.key) %></span></h2>
+
+<h3><%=h @ticket.subject %> <span>(<%=h @ticket.category.name %>)</span></h3>
+
+<div class="ticket_body">
+  <p class="timestamp">On <%= @ticket.created_at.to_s(:short) %> <%= mail_to @ticket.email, @ticket.name %> of <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %> wrote:</p>
+  <%=h @ticket.body %>
+  
+  
+  
+
+
+<p>  <b>Urgent:</b>
+  <%=h @ticket.urgent %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @ticket.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @ticket.password %>
+</p>
+
+</div>
+
+<h3>Messages</h3>
+
+
+<h3>Reply to this ticket</h3>
+
+
+<% form_for [@ticket, Message.new], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+
+  <%= fckeditor_textarea(:message, :body, :toolbarSet => 'Basic', :width => '90%', :height => '400px') %>
+  
+  
+  <p>
+    <%= f.label :attachment, 'Attach a file to this message' %><br />
+    <%= f.file_field :attachment %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>

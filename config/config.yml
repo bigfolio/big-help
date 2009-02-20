@@ -1,0 +1,10 @@
+# Some basic info about your company
+company_name: BIG Folio and NextProof
+from_email: help@bigfolio.com
+support_phone: 805-504-1126
+
+# Your custom field label
+custom_label: Dog or cat?
+
+#Can customers attach files?
+customer_attachments: false

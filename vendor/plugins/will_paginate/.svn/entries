@@ -1,0 +1,94 @@
+8
+
+dir
+38
+svn+clientsssh://67.207.134.79/home/erik/repos/clients/trunk/vendor/plugins/will_paginate
+svn+clientsssh://67.207.134.79/home/erik/repos/clients
+
+
+
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+
+svn:special svn:externals svn:needs-lock
+
+test
+dir
+
+LICENSE
+file
+
+
+
+
+2007-08-02T16:50:25.000000Z
+4f07f0b985927be06dcc54950ba5a1b9
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+Rakefile
+file
+
+
+
+
+2008-01-29T02:33:36.000000Z
+6f6dcd3ecdfe871b67e42e0e69ef15cc
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+.gitignore
+file
+
+
+
+
+2008-03-02T22:47:53.000000Z
+63c6f14f6272265832b9cfb393031074
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+init.rb
+file
+
+
+
+
+2008-01-27T17:41:08.000000Z
+11da432e17f263baaf85a892a3a33c1c
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-04-03T15:18:25.000000Z
+1c88d6bc27aa809cd6ef26543c18b1e6
+2008-06-12T16:44:14.421813Z
+15
+erik
+
+README
+file
+
+
+
+
+2008-04-03T15:18:25.000000Z
+c5c258a4b3c3b9b0523d2c3b0b8e4c3c
+2008-06-12T16:44:14.421813Z
+15
+erik
+

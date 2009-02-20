@@ -1,0 +1,277 @@
+/* These are the basic reset fonts styles (courtesy Yahoo! YUI) */
+html{color:#000;background:#333;height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}
+legend{color:#000;}
+body {font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+table {font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+/* End of reset fonts */
+
+
+body#help {
+	background: #333;
+}
+div.clear {
+	clear:both;
+}
+div#container {
+	background: transparent url(../images/container_bg.png) repeat-y center left;
+	width:970px;
+	min-height:500px;
+	margin:0 auto;
+}
+div#header {
+	width:960px;
+	background:green;
+	margin:0 5px;
+	height:50px;
+}
+div#header h1 {
+	color:#fff;
+	line-height:50px;
+	margin:0 6px;
+	font-size:2.4em;
+	-x-system-font:none;
+	font-family:Arial,sans-serif;
+	font-stretch:normal;
+}
+div#header h1 a, div#header h1 a:link, div#header h1 a:visited {
+	color:#fff;
+	font-weight:bold;
+	text-decoration: none;
+}
+div#nav {
+	float:right;
+	margin:12px 12px 0 0;
+}
+div#nav li {
+	display: block;
+	float:left;
+	margin-right:12px;
+	padding:6px 12px;
+	font-size:1em;
+	line-height:13px;
+	background:#5abd5a;
+	-moz-border-radius: 12px;
+	border-radius:12px;
+	-webkit-border-radius:12px;
+}
+div#nav li a, div#nav li a:link, div#nav li a:visited {
+	color:#fff;
+	text-decoration:none;
+}
+
+div#left {
+	width:660px;
+	margin:0 11px;
+}
+div#left p {
+	padding-bottom:6px;
+}
+div#left h1, div#left h2 {
+	color:green;
+	font-size:1.5em;
+	font-weight:bold;
+	line-height:2em;
+}
+div#left h2 span {
+	font-size:12px;
+	margin-left:12px;
+}
+div#left h2 span a, div#left h2 span a:link, div#left h2 span a:visited {
+	color:#999;
+}
+div#left h3 {
+	color:#333;
+	font-size:1.2em;
+	font-weight:bold;
+	line-height:2em;
+}
+div#left ul {
+	margin:12px 0 0 6px;
+}
+div#left li {
+	list-style: disc inside;
+	line-height:1.5em;
+}
+
+div#left fieldset {
+	width:400px;
+	background:#eee;
+	padding: 12px 0 0 12px;
+	margin-bottom:24px;
+}
+div#left legend {
+	color:#666;
+	font-size:1.2em;
+	font-weight:bold;
+	padding:0 0 0 12px;
+}
+div#left label {
+	font-weight:bold;
+	color:green;
+	line-height:1.5em;
+}
+div#left p.tip {
+	color:#666;
+	font-style: italic;
+	text-align: justify;
+	font-size:.8em;
+	margin-right:12px;
+}
+
+
+
+
+div#facebox h2 {
+	color:green;
+	font-size:1.5em;
+	font-weight:bold;
+}
+div#facebox h2 span {
+	font-size:.8em;
+	margin:0 0 12px 12px;
+	color:#999;
+}
+div#facebox div.faq_body {
+	margin:12px 0 0 0;
+	text-align: justify;
+}
+
+div.ticket {
+	background:#eee;
+	border-bottom:1px solid #ccc;
+	padding:0 0 0 6px;
+}
+div.ticket a, div.ticket a:link, div.ticket a:hover {
+	text-decoration: none;
+	color:#006666;
+}
+div.ticket h3 span {
+	color:#999;
+	font-size:.8em;
+	margin-left:12px;
+}
+div.urgent {
+	background-image: url(../images/urgent.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+div.fresh {
+	background-color:#dfd;
+}
+
+div.ticket_body {
+	background:#eed;
+	border-left:1px solid #998;
+	width:75%;
+	padding:6px;
+}
+div.ticket_body p.timestamp {
+	color:#998;
+	font-style: italic;
+}
+
+
+div#left ul.ticket_info {
+	margin:0;
+	color:#999;
+}
+div#left ul.ticket_info li {
+	list-style-type: none;
+	display:inline;
+	margin:0 12px 0 0;
+}
+div#left ul.ticket_info li a {
+	color:green;
+}
+
+div#right {
+	width:276px;
+	float:right;
+	padding:24px 0 0 0;
+}
+ul#big a, ul#big a:link, ul#big a:visited {
+	text-decoration: none;
+	color:green;
+	display:block;
+	line-height: 48px;
+	height:48px;
+	font-size:2em;
+	font-weight:bold;
+	padding-left:60px;
+	margin:0 0 12px 0;
+}
+ul#big a:hover {
+	color:#ccc;
+}
+a.big_ticket {
+	background: transparent url(../images/new.png) no-repeat top left;
+}
+a.big_find {
+	background: transparent url(../images/search.png) no-repeat top left;
+}
+span#find_form {
+	display:none;
+	line-height:48px;
+	padding-left:60px;
+}
+span#find_form input {
+	font-size:1.5em;
+	font-weight:bold;
+	color:#999;
+}
+a.big_contact {
+	background: transparent url(../images/email.png) no-repeat top left;
+}
+a.big_all {
+	background: transparent url(../images/tickets.png) no-repeat top left;
+}
+a.big_search {
+	background: transparent url(../images/search_all.png) no-repeat top left;
+}
+span#search_form {
+	display:none;
+	line-height:24px;
+	padding-left:60px;
+}
+span#search_form label {
+	font-size:1.2em;
+	display:block;
+	margin-top:6px;
+	color:#999;
+}
+span#search_form p {
+	margin-top:6px;
+}
+a.big_fresh {
+	background: transparent url(../images/fresh.png) no-repeat top left;
+}
+
+
+
+
+div#footer {
+	background: transparent url(../images/footer_bg.png) repeat-y center left;
+	width:970px;
+	height:40px;
+	margin:0 auto;
+	color:#666;
+	font-size: .8em;
+	text-align:center;
+}
+div#footer p {
+	padding:6px 11px;
+}
