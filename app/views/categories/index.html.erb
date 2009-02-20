@@ -1,21 +1,20 @@
 <h2>Current Categories <span><%= link_to 'new category', new_category_path %></span></h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
 
-<% for category in @categories %>
-  <tr>
-    <td><%=h category.name %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'FAQs', category_faqs_url(category) %></td>
-  </tr>
+<div id="categories">
+<%= render :partial => @categories %>
+</div>
+
+<h3>New category</h3>
+
+<% remote_form_for(@category, :html => {:id => 'category_form'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
 <% end %>
-</table>
-
-<br />
-
-

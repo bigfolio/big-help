@@ -1,0 +1,3 @@
+page.insert_html :bottom, 'categories', :partial => 'category', :object => @category
+
+page[:category_form].reset
