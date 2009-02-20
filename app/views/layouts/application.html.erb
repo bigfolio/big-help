@@ -93,7 +93,7 @@
   
 </div>
 <div id="footer">
-  <p>All information &copy; <%= Time.now.strftime('%Y') %> <%= AppConfig['company_name'] %> &bull; All rights reserved</p>
+  <p>All information &copy; <%= Time.now.strftime('%Y') %> <%= AppConfig['company_name'] %> &bull; All rights reserved &bull; <%= current_user ? link_to('Log out', logout_url) :  link_to('Log in', login_url)%></p>
 </div>
 
 
