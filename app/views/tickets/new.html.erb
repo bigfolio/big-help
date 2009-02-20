@@ -45,10 +45,22 @@
       <%= f.label :body, 'Details of your problem' %>
       <%= f.text_area :body %>
     </p>
-    
+  </fieldset>
+  
+  <fieldset>
+    <legend>Details</legend>
     <p class="tip">Details help us diagnose your problem faster. When appropriate, please let us know your operating system, 
       web browser, email client, and steps required to reproduce your problem.</p>
-    
+    <p>
+    <%= f.label :os, 'Operating system' %><br />
+    <%= f.select(:os, ['Mac OS X','Windows XP','Windows Vista','iPhone','Other'], {:include_blank => true}) %></p>
+    <p><%= f.label :browser, 'Web browser' %><br />
+    <%= f.select(:os, ['Firefox','Internet Explorer','Safari','Other'], {:include_blank => true}) %>
+    </p>
+    <p>
+      <%= f.label :email_client, 'Email client' %><br />
+      <%= f.select(:email_client, ['Mac Mail','Outlook','Outlook Express','Thunderbird','Google Apps Webmail'], {:include_blank => true}) %>
+    </p>
     <p>
       <%= f.label :username %><br />
       <%= f.text_field :username %>
@@ -57,6 +69,7 @@
       <%= f.label :password %><br />
       <%= f.text_field :password %>
     </p>
+    
   </fieldset>
   
   <p>
