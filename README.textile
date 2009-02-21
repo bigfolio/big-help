@@ -46,3 +46,14 @@ I'm sure there are better ways to do this, but it works for me. YMMV
 h3. Ticket key
 
 When a customer submits a support ticket, they are presented with a unique 8-character "key" or "token". The key can be used to look up their ticket later. If you'd like the change the length, you'll find it defined in the Ticket model file (app/models/ticket.rb).
+
+h2. I'd like to thank the academy ...
+
+BIG Help wouldn't have been possible (or at least not as cool) without the following great projects/plugins/gems:
+
+# Paperclip plugin from Thoughbot
+# restful_authentication plugin from Technoweenie
+# jRails plugin
+# Fckeditor from Frederico Caldeira Knabben
+# mobile_fu plugin from Brendan G. Lim, Intridea, Inc.
+# Ruby on Rails from 37signals (natch)
