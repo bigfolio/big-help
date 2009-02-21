@@ -1,0 +1,48 @@
+h1. Welcome to BIG Help
+
+Welcome to BIG Help. BIG Help is an open-source help ticket system that can be used by consumer-focused web companies. BIG Help is designed to be a simple (and free) alternative to online services such as "HelpSpot":http://www.userscape.com/products/helpspot/ and "Kayako":http://www.kayako.com/. 
+
+BIG Help is based on the support app we use at "BIG Folio":http://www.bigfolio.com and "NextProof":http://www.nextproof.com (we make stuff for photographers). 
+
+h2. Current status
+
+The app is getting close to usable. I will be adding the email features next. 
+
+h2. Required gems
+
+# chronic (for date range search)
+# rmagick (for attaching images to threads via Paperclip)
+
+h2. Setup
+
+# Create your database
+# Edit the config/database.yml file
+# Edit the config/config.yml file (see below)
+# Run migration(s) with rake db:migrate
+# Edit the views in app/views/help/index.html.erb app/views/help/contact.html.erb (see below)
+# Fire up your mongrel(s) or mod_rails
+# Browse to /signup and create your initial user account (have your staff do the same)
+# Once your staff has created accounts, you'll want to turn off the /signup route and users/new action (see below)
+
+h3. The config.yml file
+
+The config.yml file contains settings about your app and company. You should edit this file with your information. When BIG Help starts, these values are loaded into the AppConfig hash and used in the layouts, views, and email methods. 
+
+h3. The home and contact pages
+
+The root of the app is routed to /help/index, which renders the /app/views/help/index.html.erb file. This is designed to be a general entry point for your customers. Personally, I like to present customers with FAQs or a Wiki before letting them submit a ticket. If that's not your style, you can change map.root to route to help/new (in config/routes.rb). 
+
+You should do the same for the contact page. 
+
+h3. Signup area
+
+BIG Help uses the restful-authentication plugin for support staff access. When you initially fire up the application, you can create new support user accounts by going to /signup. Obviously, once you have created your support accounts, you'll want to turn off signups. You should do this by: 
+1. Comment out the /signup route in config/routes.rb 
+2. Uncomment the redirect_back_or_default('/') line in the users controller (new action)
+3. Restart your app
+
+I'm sure there are better ways to do this, but it works for me. YMMV
+
+h3. Ticket key
+
+When a customer submits a support ticket, they are presented with a unique 8-character "key" or "token". The key can be used to look up their ticket later. If you'd like the change the length, you'll find it defined in the Ticket model file (app/models/ticket.rb).
