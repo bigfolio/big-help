@@ -1,0 +1,24 @@
+<%= "<h1>URGENT!</h1>" if @ticket.urgent %>
+<h1>New ticket <%= @ticket.key %> from <%= @ticket.name %></h1>
+<h2><%= @ticket.subject %></h2>
+
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr align="right"><th>Name</th>  <td align="left"><%= @ticket.name %></td></tr>
+  <tr align="right"><th>Email</th> <td align="left"><%= @ticket.email %></td></tr>
+  <tr align="right"><th>Domain</th><td align="left"><%= @ticket.domain %></td></tr>
+  <tr><th align="right">Category  </th><td align="left"><%= @ticket.category.name %></td>
+</table>
+<hr />
+<%= @ticket.body %>
+<hr />
+
+<p>Here's some more information about the customer:</p>
+
+<table border="0" cellspacing="0" cellpadding="5">  
+  <tr align="right"><th>Operating system</th><td align="left"><%= @ticket.os %>           </td>
+  <tr align="right"><th>Browser         </th><td align="left"><%= @ticket.browser %>      </td>
+  <tr align="right"><th>Email client    </th><td align="left"><%= @ticket.email_client %> </td>
+</table>
+<hr />
+
+<h3><%= link_to 'View and reply to this ticket', ticket_url(@ticket, :host => 'localhost', :port => '3000') %></h3>

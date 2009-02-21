@@ -1,0 +1,14 @@
+<p>Dear <%= @ticket.name %>,</p>
+<p>We have an update on the following support ticket:</p>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr><th align="right">Ticket Key</th><td align="left"><%= @ticket.key %></td>
+  <tr><th align="right">Subject   </th><td align="left"><%= @ticket.subject %></td>
+  <tr><th align="right">Category  </th><td align="left"><%= @ticket.category.name %></td>
+  <tr><th align="right">Domain    </th><td align="left"><%= @ticket.domain %></td>
+</table>
+<h3>Update</h3>
+<%= @message.body %>
+<h3><%= link_to 'View your request and all replies online', view_by_key_url(@ticket.key, :host => 'localhost', :port => '3000') %></h3>
+<p>You can also add additional information from the URL above.</p>
+<h3>Your original message</h3>
+<%= simple_format @ticket.body %>

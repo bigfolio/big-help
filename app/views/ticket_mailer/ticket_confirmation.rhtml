@@ -1,0 +1,16 @@
+<p>Dear <%= @ticket.name %>,</p>
+<p>The following support ticket has been created:</p>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr><th align="right">Ticket Key</th><td align="left"><%= @ticket.key %></td>
+  <tr><th align="right">Subject   </th><td align="left"><%= @ticket.subject %></td>
+  <tr><th align="right">Category  </th><td align="left"><%= @ticket.category.name %></td>
+  <tr><th align="right">Domain    </th><td align="left"><%= @ticket.domain %></td>
+</table>
+<h3><%= link_to 'View your request online', view_by_key_url(@ticket.key, :host => 'localhost', :port => '3000') %></h3>
+<p>Replies to your request will be emailed to you and available at URL above.</p>
+<h3>Your message</h3>
+<%= simple_format @ticket.body %>
+<h3>When should I expect a reply?</h3>
+<p>Our normal support hours are <strong>8:30am PST to 5pm PST, Monday through Friday</strong>.</p> 
+
+<p>Tickets submitted during evenings and weekends will receive a response the next business day. Emergency requests (<em>e.g. site or email down</em>) will be addressed as soon as possible.</p>
