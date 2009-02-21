@@ -30,9 +30,9 @@ class Message < ActiveRecord::Base
       users = User.find(:all)
       users.each do |u|
         if self.attachment.file?
-          TicketMailer.deliver_ticket_update_with_attachment(u, self, self.ticket)
+          TicketMailer.deliver_ticket_update_with_attachment(u, self, self.ticket) if u.categories.include?(self.ticket.category)
         else
-          TicketMailer.deliver_ticket_update(u, self, self.ticket)
+          TicketMailer.deliver_ticket_update(u, self, self.ticket) if u.categories.include?(self.ticket.category)
         end
       end
     end

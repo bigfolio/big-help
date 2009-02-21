@@ -7,6 +7,28 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def edit
+    @user = current_user
+    @categories = Category.find(:all)
+  end
+  
+  def update
+    @user = current_user
+    @categories = Category.find(:all)
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        flash[:notice] = 'Your profile was successfully updated.'
+        format.html { redirect_to(profile_url) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+  
  
   def create
     logout_keeping_session!

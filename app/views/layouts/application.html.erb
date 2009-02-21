@@ -45,9 +45,9 @@
         <li><%= link_to "BIG Folio", "http://www.bigfolio.com" %></li>
         <li><%= link_to "Help articles", "http://www.bigfolio.com/help" %></li>
         <li><%= link_to "New ticket", new_ticket_url %></li>
-        <li><%= link_to "FAQs", faqs_url %></li>
         <% if current_user %>
         <li><%= link_to "Categories", categories_url %></li>
+        <li><%= link_to "Profile", profile_url %></li>
         <li><%= link_to "Log out", logout_url %></li>
         <% end %>
       </ul>

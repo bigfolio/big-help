@@ -26,7 +26,7 @@ class Ticket < ActiveRecord::Base
   
   def send_alerts
     users = User.find(:all)
-    users.each { |u| TicketMailer.deliver_ticket_alert(u, self) }
+    users.each { |u| TicketMailer.deliver_ticket_alert(u, self) if u.categories.include?(self.category) }
     
     TicketMailer.deliver_ticket_confirmation(self)
     
