@@ -1,5 +1,7 @@
 class HelpController < ApplicationController
   
+  # All the actions here are for the customer view, so no authentication required
+  
   def index
     
   end
@@ -20,10 +22,6 @@ class HelpController < ApplicationController
   def search_by_key
     @ticket = Ticket.find_by_key(params[:key])
     redirect_to @ticket ? view_by_key_url(@ticket.key) : root_url
-  end
-  
-  def search
-    
   end
   
 end

@@ -1,4 +1,7 @@
 class MessagesController < ApplicationController
+
+  before_filter :login_required, :except => [:create]
+
   # GET /messages
   # GET /messages.xml
   def index
@@ -47,7 +50,11 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         flash[:notice] = 'Message was successfully created.'
-        format.html { redirect_to(@ticket) }
+        if current_user
+          format.html { redirect_to(@ticket) }
+        else
+          format.html { redirect_to(view_by_key_url(@ticket.key)) }
+        end
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
         format.html { render :action => "new" }

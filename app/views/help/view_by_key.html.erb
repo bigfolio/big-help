@@ -8,8 +8,6 @@
 <div class="ticket_body">
   <p class="timestamp">On <%= @ticket.created_at.to_s(:short) %> <%= mail_to @ticket.email, @ticket.name %> of <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %> wrote:</p>
   <%=h @ticket.body %>
-  
-
 </div>
 
 <h3>Replies</h3>

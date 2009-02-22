@@ -7,7 +7,7 @@
     
     <% if message.attachment.file? %>
     <div class="attachment">
-    <%= link_to message.attachment_file_name, message.attachment.url %>
+    <%= link_to truncate(message.attachment_file_name), message.attachment.url %>
     </div>
     <% end %>
 <% end %>

@@ -1,5 +1,8 @@
 require 'chronic'
 class TicketsController < ApplicationController
+  
+  before_filter :login_required, :except => [:new, :create]
+  
   # GET /tickets
   # GET /tickets.xml
   def index
