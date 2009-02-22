@@ -1,3 +1,5 @@
 <h2><%= action_name.capitalize %> tickets <span><%= link_to 'view all tickets', tickets_url %></span></h2>
 
 <%= render :partial => @tickets %>
+
+<%= will_paginate @tickets %>

@@ -97,11 +97,11 @@ class TicketsController < ApplicationController
   end
   
   def fresh
-    @tickets = Ticket.find(:all, :conditions => "state = 'fresh' OR state = 'researching'")
+    @tickets = Ticket.find(:all, :conditions => "state = 'fresh' OR state = 'researching'", :order => 'created_at DESC')
   end
   
   def active
-    @tickets = Ticket.find(:all, :conditions => "state = 'active'")
+    @tickets = Ticket.paginate :page => params[:page], :conditions => "state = 'active'", :order => 'created_at DESC'
     render :template => 'tickets/fresh'
   end
   
