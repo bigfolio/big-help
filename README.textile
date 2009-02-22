@@ -10,6 +10,7 @@ The app is getting close to usable. I will be adding the email features next.
 
 h2. Required gems
 
+# mislav-will_paginate (for pagination of tickets view)
 # chronic (for date range search)
 # rmagick (for attaching images to threads via Paperclip)
 
