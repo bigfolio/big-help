@@ -6,5 +6,13 @@ support_phone: 805-504-1126
 # Your custom field label
 custom_label: Dog or cat?
 
-#Can customers attach files?
+# Can customers attach files?
 customer_attachments: false
+
+# External links for the top nav section
+nav_links:
+    - website designs: http://www.bigfolio.com/website-designs
+    - company: http://www.bigfolio.com/about
+    - testimonials: http://www.bigfolio.com/testimonials
+    - contact: http://www.bigfolio.com/contact
+    - blog: http://bfstop.bigfolioblog.com/

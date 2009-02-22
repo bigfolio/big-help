@@ -42,15 +42,19 @@
   <div id="header">
     <div id="nav">
       <ul>
-        <li><%= link_to "BIG Folio", "http://www.bigfolio.com" %></li>
-        <li><%= link_to "Help articles", "http://www.bigfolio.com/help" %></li>
-        <li><%= link_to "New ticket", new_ticket_url %></li>
-        <% if current_user %>
-        <li><%= link_to "Categories", categories_url %></li>
-        <li><%= link_to "Profile", profile_url %></li>
-        <li><%= link_to "Log out", logout_url %></li>
+        <% AppConfig['nav_links'].each do |link| %>
+          <% link.each do |key, value| %>
+            <li><%= link_to key, value %></li>
+          <% end %>
         <% end %>
       </ul>
+      <% if current_user %>
+      <ul>
+        <li><%= link_to "categories", categories_url %></li>
+        <li><%= link_to "profile", profile_url %></li>
+        <li><%= link_to "log out", logout_url %></li>
+      </ul>
+      <% end %>
     </div>    
     <h1><%= link_to image_tag('logo.jpg'), root_url %></h1>
   </div>

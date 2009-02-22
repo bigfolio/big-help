@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20090221212303) do
     t.string   "browser"
   end
 
-  create_table "user_notifications", :force => true do |t|
+  create_table "user_notifications", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at"
