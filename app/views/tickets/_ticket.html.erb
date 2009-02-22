@@ -1,14 +1,19 @@
 <% div_for ticket, :class => ticket.classes do %>
   <h3><%= link_to ticket.subject.blank? ? ticket.key : ticket.subject, ticket %> 
-    <span><%= ticket.key %> submitted <%= time_ago_in_words ticket.created_at %> ago</span></h3>
+    <span><%= ticket.key %> submitted <%= time_ago_in_words ticket.created_at %> ago 
+      by <%= mail_to ticket.email, ticket.name %></span></h3>
   <ul class='ticket_info'>
-    <li></li>
-    <li>by <%= mail_to ticket.email, ticket.name %></li>
     <li>account: <%= link_to ticket.domain, ticket.domain.match('http://') ? ticket.domain : 'http://'+ticket.domain %></li>
     <% if ticket.category %><li><%= link_to ticket.category.name, ticket.category %></li><% end %>
-    <li><%= link_to 'Delete', ticket, :confirm => 'Are you sure?', :method => :delete %></li>
+    
+    
+    <!-- Here's our different actions based on the ticket state -->
+    <% if ticket.state != 'closed' %><li id="close_action_<%= ticket.id %>"><%= link_to_remote 'Close', :url => close_ticket_path(ticket) %></li><% end %>
+    
     <% if ticket.state == 'fresh' %>
-    <li id="<%= "researching_#{ticket.id}" %>"+><%= link_to_remote "I'm working on this", :url => research_ticket_path(ticket) %></li>
+      <li id="<%= "researching_#{ticket.id}" %>"+><%= link_to_remote "I'm working on this", :url => research_ticket_path(ticket) %></li>
     <% end %>
+    <!-- end of actions -->
+    
   </ul>
 <% end %>

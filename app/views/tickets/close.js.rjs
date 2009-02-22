@@ -1,0 +1,4 @@
+# page.replace_html "close_action_#{@ticket.id}", :text => "Ticket closed"
+page.visual_effect :highlight, "ticket_#{@ticket.id}"
+# page.remove "ticket_#{@ticket.id}"
+page.replace "ticket_#{@ticket.id}", :partial => 'ticket', :object => @ticket

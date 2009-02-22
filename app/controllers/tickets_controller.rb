@@ -33,6 +33,16 @@ class TicketsController < ApplicationController
       format.js
     end
   end
+  
+  def close 
+    @ticket = Ticket.find(params[:id])
+    @ticket.close!
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+
 
   # GET /tickets/new
   # GET /tickets/new.xml

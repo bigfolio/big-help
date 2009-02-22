@@ -14,7 +14,18 @@ class Ticket < ActiveRecord::Base
   after_create  :send_alerts
 
   event :research do 
-      transitions :from => :fresh, :to => :researching
+    transitions :from => :fresh, :to => :researching
+  end
+  
+  event :activate do 
+    transitions :from => :fresh, :to => :active
+    transitions :from => :researching, :to => :active
+  end
+  
+  event :close do 
+    transitions :from => :fresh, :to => :closed
+    transitions :from => :researching, :to => :closed
+    transitions :from => :active, :to => :closed
   end
   
   def classes

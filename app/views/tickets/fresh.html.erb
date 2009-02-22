@@ -2,4 +2,4 @@
 
 <%= render :partial => @tickets %>
 
-<%= will_paginate @tickets %>
+<%= will_paginate @tickets if action_name == 'active' %>

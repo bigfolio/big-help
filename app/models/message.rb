@@ -9,6 +9,7 @@ class Message < ActiveRecord::Base
   
   
   after_save :send_reply
+  after_save :activate_ticket
   # after_post_process :send_reply_with_attachment
   
     
@@ -18,6 +19,10 @@ class Message < ActiveRecord::Base
   end
   
   protected
+  
+  def activate_ticket
+    self.ticket.activate!
+  end
   
   def send_reply
     if self.user
