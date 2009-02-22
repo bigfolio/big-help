@@ -14,7 +14,7 @@ sub {vertical-align:text-bottom;}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
 input,textarea,select{*font-size:100%;}
 legend{color:#000;}
-body {font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+body {font:13px/1.231 'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;*font-size:small;*font:x-small;}
 table {font-size:inherit;font:100%;}
 pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
 /* End of reset fonts */
@@ -43,7 +43,6 @@ div#header h1 {
 	margin:0 6px;
 	font-size:2.4em;
 	-x-system-font:none;
-	font-family:Arial,sans-serif;
 	font-stretch:normal;
 }
 div#header h1 a, div#header h1 a:link, div#header h1 a:visited {
@@ -76,7 +75,7 @@ div#left p {
 	padding-bottom:6px;
 }
 div#left h1, div#left h2 {
-	color:blue;
+	color:#0066CC;
 	font-size:1.5em;
 	font-weight:bold;
 	line-height:2em;
@@ -116,7 +115,7 @@ div#left legend {
 }
 div#left label {
 	font-weight:bold;
-	color:blue;
+	color:#0066CC;
 	line-height:1.5em;
 }
 div#left label.emergency {
@@ -134,7 +133,7 @@ div#left .tip {
 
 
 div#facebox h2 {
-	color:blue;
+	color:#0066CC;
 	font-size:1.5em;
 	font-weight:bold;
 }
@@ -226,7 +225,7 @@ div#left ul.ticket_info li {
 	margin:0 12px 0 0;
 }
 div#left ul.ticket_info li a {
-	color:blue;
+	color:#0066CC;
 }
 
 div#right {
@@ -236,7 +235,7 @@ div#right {
 }
 ul#big a, ul#big a:link, ul#big a:visited {
 	text-decoration: none;
-	color:blue;
+	color:#0066CC;
 	display:block;
 	line-height: 48px;
 	height:48px;
