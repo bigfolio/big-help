@@ -34,7 +34,7 @@ div#container {
 }
 div#header {
 	width:960px;
-	background:green;
+	background:blue;
 	margin:0 5px;
 	height:50px;
 }
@@ -63,7 +63,7 @@ div#nav li {
 	padding:6px 12px;
 	font-size:1em;
 	line-height:13px;
-	background:#5abd5a;
+	background:#99f;
 	-moz-border-radius: 12px;
 	border-radius:12px;
 	-webkit-border-radius:12px;
@@ -81,7 +81,7 @@ div#left p {
 	padding-bottom:6px;
 }
 div#left h1, div#left h2 {
-	color:green;
+	color:blue;
 	font-size:1.5em;
 	font-weight:bold;
 	line-height:2em;
@@ -121,7 +121,7 @@ div#left legend {
 }
 div#left label {
 	font-weight:bold;
-	color:green;
+	color:blue;
 	line-height:1.5em;
 }
 div#left label.emergency {
@@ -139,7 +139,7 @@ div#left .tip {
 
 
 div#facebox h2 {
-	color:green;
+	color:blue;
 	font-size:1.5em;
 	font-weight:bold;
 }
@@ -231,7 +231,7 @@ div#left ul.ticket_info li {
 	margin:0 12px 0 0;
 }
 div#left ul.ticket_info li a {
-	color:green;
+	color:blue;
 }
 
 div#right {
@@ -241,7 +241,7 @@ div#right {
 }
 ul#big a, ul#big a:link, ul#big a:visited {
 	text-decoration: none;
-	color:green;
+	color:blue;
 	display:block;
 	line-height: 48px;
 	height:48px;
