@@ -175,6 +175,13 @@ div.urgent {
 div.fresh {
 	background-color:#dfd;
 }
+div.closed {
+	background-color:#efe;
+	color:#ddd;
+}
+div.closed h3, div.closed h3 span, div.closed a:link, div.closed a:hover {
+	color:#ddd;
+}
 
 div.ticket_body {
 	background:#eed;
@@ -290,6 +297,10 @@ a.big_fresh {
 }
 
 
+div.pagination {
+	margin:12px 0 0 0;
+	color:#999;
+}
 
 
 div#footer {

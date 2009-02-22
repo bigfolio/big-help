@@ -1,10 +1,11 @@
 require 'chronic'
-
 class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.xml
   def index
-    @tickets = Ticket.find(:all, :conditions => search_conditions)
+    @tickets = Ticket.paginate :page => params[:page], :conditions => search_conditions, :order => 'created_at DESC'
+    
+    # @tickets = Ticket.find(:all, :conditions => search_conditions)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -58,6 +58,8 @@ Rails::Initializer.run do |config|
     :session_key => '_BIG-Help-2_session',
     :secret      => '30822f25f410abefca60fdbd999f2e817a4c331b1ed61dfe0f5c04dcc8cf1421e5d04855296f996e0dce13ffaa10d2114da145c3776d55cf105bea93459d5135'
   }
+  
+  config.gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate', :source => 'http://gems.github.com'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
