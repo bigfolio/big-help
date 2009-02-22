@@ -295,6 +295,9 @@ span#search_form p {
 a.big_fresh {
 	background: transparent url(../images/fresh.png) no-repeat top left;
 }
+a.big_active {
+	background: transparent url(../images/write.png) no-repeat top left;
+}
 
 
 div.pagination {

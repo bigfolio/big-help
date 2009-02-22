@@ -3,7 +3,7 @@
 <% end %>
 <h2>Ticket <%=h @ticket.key %> <span><%= link_to 'customer view', view_by_key_url(@ticket.key) %></span></h2>
 
-<h3><%=h @ticket.subject %> <span>(<%=h @ticket.category.name %>)</span></h3>
+<h3><%=h @ticket.subject %> <span>(<%= @ticket.category.name %>)</span></h3>
 <div id="status">
   <strong>Status: <%= @ticket.state %></strong>
   <%= link_to_remote "I'm working on this", :url => research_ticket_url(@ticket) if @ticket.state == 'fresh' %>

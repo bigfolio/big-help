@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :faqs
 
-  map.resources :tickets, :has_many => :messages, :collection => {:fresh => :get}, :member => {:research => :any}
+  map.resources :tickets, :has_many => :messages, :collection => {:fresh => :get, :active => :get}, :member => {:research => :any}
 
   map.faqs_by_category '/help/faqs/:id', :controller => 'help', :action => 'faqs'
   

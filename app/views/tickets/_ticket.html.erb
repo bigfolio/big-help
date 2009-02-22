@@ -1,5 +1,6 @@
 <% div_for ticket, :class => ticket.classes do %>
-  <h3><%= link_to ticket.subject.blank? ? ticket.key : ticket.subject, ticket %> <span><%= time_ago_in_words ticket.created_at %> ago</span></h3>
+  <h3><%= link_to ticket.subject.blank? ? ticket.key : ticket.subject, ticket %> 
+    <span><%= ticket.key %> submitted <%= time_ago_in_words ticket.created_at %> ago</span></h3>
   <ul class='ticket_info'>
     <li></li>
     <li>by <%= mail_to ticket.email, ticket.name %></li>

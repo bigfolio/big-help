@@ -100,6 +100,11 @@ class TicketsController < ApplicationController
     @tickets = Ticket.find(:all, :conditions => "state = 'fresh' OR state = 'researching'")
   end
   
+  def active
+    @tickets = Ticket.find(:all, :conditions => "state = 'active'")
+    render :template => 'tickets/fresh'
+  end
+  
   protected
   
   def search_conditions
