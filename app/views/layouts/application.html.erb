@@ -63,7 +63,7 @@
     
     <ul id="big">
       <li><%= link_to "New ticket", new_ticket_url, :class=>"big_ticket" %></li>
-      <li><%= link_to "Contact us", contact_url, :class=>"big_contact" %></li>
+      <li><%= link_to "Contact us", AppConfig['contact'], :class=>"big_contact" %></li>
       <li><span id="find_label"><a href="#" onclick="show_find()" class="big_find">Find your ticket</a></span>
           <span id="find_form"><% form_tag(key_search_url, {:method => 'get'}) do %>
             <%= text_field_tag :key, 'Ticket key', :size => 10 %>

@@ -9,6 +9,9 @@ custom_label: Dog or cat?
 # Can customers attach files?
 customer_attachments: false
 
+# Where does your contact link go?
+contact: http://www.bigfolio.com/contact
+
 # External links for the top nav section
 nav_links:
     - website designs: http://www.bigfolio.com/website-designs
