@@ -4,6 +4,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to staff when ticket is submitted
     recipients    user.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "New support request (#{ticket.key}) from #{ticket.name}"
     body          :ticket => ticket
     content_type  "text/html"
@@ -13,6 +14,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to staff when the customer adds info
     recipients    user.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "New reply from #{ticket.name} for support request [#{ticket.key}]"
     body[:message] = message
     body[:ticket]  = ticket
@@ -23,6 +25,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to staff when the customer adds info
     recipients    user.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "New reply from #{ticket.name} for support request [#{ticket.key}]"
     body[:message] = message
     body[:ticket]  = ticket
@@ -36,6 +39,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to customer when staff submits a reply
     recipients    ticket.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "Update on your support request [#{ticket.key}]"
     body[:message] = message
     body[:ticket]  = ticket
@@ -46,6 +50,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to customer (with attachment) when staff submits a reply
     recipients    ticket.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "Update on your support request [#{ticket.key}]"
     body[:message] = message
     body[:ticket]  = ticket
@@ -59,6 +64,7 @@ class TicketMailer < ActionMailer::Base
     # Sent to customer to confirm their submission
     recipients    ticket.email
     from          "help@bigfolio.com"
+    reply_to      "help@bigfolio.com"
     subject       "Your support request [#{ticket.key}] has been recieved"
     body          :ticket => ticket
     content_type  "text/html"
