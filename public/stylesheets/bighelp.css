@@ -34,9 +34,8 @@ div#container {
 }
 div#header {
 	width:960px;
-	background:blue;
 	margin:0 5px;
-	height:50px;
+	height:70px;
 }
 div#header h1 {
 	color:#fff;
@@ -63,13 +62,9 @@ div#nav li {
 	padding:6px 12px;
 	font-size:1em;
 	line-height:13px;
-	background:#99f;
-	-moz-border-radius: 12px;
-	border-radius:12px;
-	-webkit-border-radius:12px;
 }
 div#nav li a, div#nav li a:link, div#nav li a:visited {
-	color:#fff;
+	color:#555;
 	text-decoration:none;
 }
 
