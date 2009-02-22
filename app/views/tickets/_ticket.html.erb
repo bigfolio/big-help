@@ -8,7 +8,11 @@
     
     
     <!-- Here's our different actions based on the ticket state -->
-    <% if ticket.state != 'closed' %><li id="close_action_<%= ticket.id %>"><%= link_to_remote 'Close', :url => close_ticket_path(ticket) %></li><% end %>
+    <% if ticket.state != 'closed' %>
+    <li id="state_action_<%= ticket.id %>"><%= link_to_remote 'Close', :url => close_ticket_path(ticket) %></li>
+    <% else %>
+    <li id="state_action_<%= ticket.id %>"><%= link_to_remote 'Re-activate', :url => activate_ticket_path(ticket) %></li>
+    <% end %>
     
     <% if ticket.state == 'fresh' %>
       <li id="<%= "researching_#{ticket.id}" %>"+><%= link_to_remote "I'm working on this", :url => research_ticket_path(ticket) %></li>

@@ -20,6 +20,7 @@ class Ticket < ActiveRecord::Base
   event :activate do 
     transitions :from => :fresh, :to => :active
     transitions :from => :researching, :to => :active
+    transitions :from => :closed, :to => :active
   end
   
   event :close do 

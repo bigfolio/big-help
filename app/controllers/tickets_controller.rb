@@ -45,6 +45,15 @@ class TicketsController < ApplicationController
       format.js
     end
   end
+  
+  def activate
+    @ticket = Ticket.find(params[:id])
+    @ticket.activate!
+    
+    respond_to do |format|
+      format.js
+    end
+  end
 
 
   # GET /tickets/new

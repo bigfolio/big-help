@@ -172,6 +172,8 @@ div.fresh {
 div.closed {
 	background-color:#efe;
 	color:#ddd;
+	opacity: 0.5;
+	-moz-opacity:0.5;
 }
 div.closed h3, div.closed h3 span, div.closed a:link, div.closed a:hover {
 	color:#ddd;
