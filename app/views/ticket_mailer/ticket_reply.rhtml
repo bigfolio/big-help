@@ -8,7 +8,7 @@
 </table>
 <h3>Update</h3>
 <%= @message.body %>
-<h3><%= link_to 'View your request and all replies online', view_by_key_url(@ticket.key, :host => 'bighelp2.bigfolio.com') %></h3>
+<h3><%= link_to 'View your request and all replies online', view_by_key_url(@ticket.key, :host => 'bighelp.bigfolio.com') %></h3>
 <p>You can also add additional information from the URL above.</p>
 <h3>Your original message</h3>
 <%= simple_format @ticket.body %>

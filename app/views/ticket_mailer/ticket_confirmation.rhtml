@@ -6,7 +6,7 @@
   <tr><th align="right">Category  </th><td align="left"><%= @ticket.category.name %></td>
   <tr><th align="right">Domain    </th><td align="left"><%= @ticket.domain %></td>
 </table>
-<h3><%= link_to 'View your request online', view_by_key_url(@ticket.key, :host => 'bighelp2.bigfolio.com') %></h3>
+<h3><%= link_to 'View your request online', view_by_key_url(@ticket.key, :host => 'bighelp.bigfolio.com') %></h3>
 <p>Replies to your request will be emailed to you and available at URL above.</p>
 <h3>Your message</h3>
 <%= simple_format @ticket.body %>
