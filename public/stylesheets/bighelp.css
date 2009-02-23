@@ -17,6 +17,7 @@ legend{color:#000;}
 body {font:13px/1.231 'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;*font-size:small;*font:x-small;}
 table {font-size:inherit;font:100%;}
 pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+a, a:link, a:visited {color:#0066CC;}
 /* End of reset fonts */
 
 
@@ -27,20 +28,22 @@ div.clear {
 	clear:both;
 }
 div#container {
-	background: transparent url(../images/container_bg.png) repeat-y center left;
-	width:970px;
+	background: #fff;
+	width:930px;
 	min-height:550px;
 	margin:0 auto;
+	border-left:3px solid #EEE;
+	border-right:3px solid #EEE;
 }
 div#header {
-	width:960px;
+	width:930px;
 	margin:0 5px;
 	height:70px;
 }
 div#header h1 {
 	color:#fff;
 	line-height:50px;
-	margin:0 6px;
+	margin:0 12px;
 	font-size:2.4em;
 	-x-system-font:none;
 	font-stretch:normal;
@@ -67,15 +70,20 @@ div#nav li a, div#nav li a:link, div#nav li a:visited {
 	text-decoration:none;
 }
 
+div#splash {
+	width:880px;
+	margin:0 auto 24px auto;
+}
+
 div#left {
-	width:660px;
-	margin:0 11px;
+	width:600px;
+	margin:0 12px 0 24px;
 }
 div#left p {
 	padding-bottom:6px;
 }
 div#left h1, div#left h2 {
-	color:#0066CC;
+	color:#333;
 	font-size:1.5em;
 	font-weight:bold;
 	line-height:2em;
@@ -182,7 +190,7 @@ div.closed h3, div.closed h3 span, div.closed a:link, div.closed a:hover {
 div.ticket_body {
 	background:#eed;
 	border-left:1px solid #998;
-	width:85%;
+	width:100%;
 	padding:6px;
 }
 div.ticket_body p.timestamp, div.message p.timestamp {
@@ -192,7 +200,7 @@ div.ticket_body p.timestamp, div.message p.timestamp {
 div.staff_message {
 	background:#ede;
 	border-left:1px solid #998;
-	width:85%;
+	width:100%;
 	padding:6px;
 	margin-bottom: 12px;
 	overflow:auto;
@@ -231,18 +239,18 @@ div#left ul.ticket_info li a {
 }
 
 div#right {
-	width:276px;
+	width:240px;
 	float:right;
-	padding:24px 0 0 0;
+	padding:24px 0 0 12px;
 }
 ul#big a, ul#big a:link, ul#big a:visited {
 	text-decoration: none;
-	color:#0066CC;
+	color:#333;
 	display:block;
 	line-height: 48px;
 	height:48px;
-	font-size:2em;
-	font-weight:bold;
+	font-size:1.6em;
+	font-weight:normal;
 	padding-left:60px;
 	margin:0 0 12px 0;
 }
@@ -303,14 +311,17 @@ div.pagination {
 
 
 div#footer {
-	background: transparent url(../images/footer_bg.png) repeat-y center left;
-	width:970px;
+	background: #fff;
+	width:930px;
 	height:40px;
 	margin:0 auto;
 	color:#666;
 	font-size: .8em;
 	text-align:center;
+	border-left:3px solid #EEE;
+	border-right:3px solid #EEE;
+	border-bottom:3px solid #EEE;	
 }
 div#footer p {
-	padding:6px 11px;
+	padding:6px 12px;
 }
