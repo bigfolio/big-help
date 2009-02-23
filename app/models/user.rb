@@ -5,6 +5,15 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  has_attached_file :avatar,
+    :styles => {
+      :thumb=> "75x75#",
+      :small  => "300x300>" 
+    },
+    :path => ":rails_root/public/avatars/:attachment/:id/:style_:basename.:extension",
+    :url => "/avatars/:attachment/:id/:style_:basename.:extension"
+  
+
   has_many :messages
   
   has_and_belongs_to_many :categories, :join_table => 'user_notifications'
@@ -27,11 +36,9 @@ class User < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :name, :password, :password_confirmation, :category_ids
-
-
-
-  # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
+  attr_accessible :login, :email, :name, :password, :password_confirmation, :category_ids, :avatar, :avatar_updated_at, :avatar_file_name, :avatar_content_type, :avatar_file_size
+  
+  # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.     :avatar_uploaded_at, 
   #
   # uff.  this is really an authorization, not authentication routine.  
   # We really need a Dispatch Chain here or something.

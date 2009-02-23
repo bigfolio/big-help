@@ -224,6 +224,15 @@ div.attachment a:hover {
 	background-color:yellow;
 }
 
+div.avatar {
+	width:75px;
+	height:75px;
+	overflow:hidden;
+	background:#fff;
+	border:1px solid #999;
+	float:right;
+}
+
 
 div#left ul.ticket_info {
 	margin:0;

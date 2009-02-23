@@ -1,7 +1,7 @@
 <h2>Edit your profile</h2>
 
 <%= error_messages_for :user %>
-<% form_for(@user) do |f| -%>
+<% form_for(@user, :html => { :multipart => true }) do |f| -%>
 
 
 <fieldset>
@@ -16,6 +16,9 @@
   
   <p><%= label_tag 'email' %><br/>
   <%= f.text_field :email %></p>  
+  
+  <p><%= label_tag 'avatar' %><br />
+    <%= f.file_field :avatar %></p>
 </fieldset>
 
 
