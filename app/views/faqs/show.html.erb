@@ -3,3 +3,6 @@
 <div class="faq_body">
 <%=@faq.body %>
 </div>
+<div class="faq_more">
+  <%= link_to "More #{@faq.category.name} help topics ...", @faq.category.help_url %>
+</div>

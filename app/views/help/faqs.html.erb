@@ -8,11 +8,15 @@
   
   <%= render :partial => 'help/faq', :collection => @faqs %>
   
+  <div class="faq_more">
+    <%= link_to "More #{@faqs.first.category.name} help topics ...", @faqs.first.category.help_url %>
+  </div>
+  
   <script type="text/javascript">
     $('a[rel*=facebox]').facebox({
       loading_image : 'loading.gif',
       close_image   : 'closelabel.gif'
     }) 
   </script>
-
+  
 <% end %>
