@@ -28,7 +28,10 @@
 
 
   <%= fckeditor_textarea(:message, :body, :toolbarSet => 'Basic', :width => '90%', :height => '400px') %>
-  
+
+  <p>
+    <%= check_box_tag :close_ticket %> <label for="close_ticket">Close this ticket</label>
+  </p>
   
   <p>
     <%= f.label :attachment, 'Attach a file to this message' %><br />

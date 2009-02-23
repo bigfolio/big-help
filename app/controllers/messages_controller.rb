@@ -51,6 +51,7 @@ class MessagesController < ApplicationController
       if @message.save
         flash[:notice] = 'Message was successfully created.'
         if current_user
+          @ticket.close! if params[:close_ticket]
           format.html { redirect_to(@ticket) }
         else
           format.html { redirect_to(view_by_key_url(@ticket.key)) }
