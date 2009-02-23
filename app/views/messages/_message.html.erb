@@ -1,8 +1,8 @@
 <% div_for message, :class => message.classes do %>
 
-  <% if current_user and current_user.avatar.file? %>
+  <% if message.user %>
   <div class="avatar">
-    <%= image_tag current_user.avatar.url(:thumb) %>
+    <%= image_tag message.user.avatar.url(:thumb) if message.user.avatar.file? %>
   </div>
   <% end %>
   <p class="timestamp">On <%= message.created_at.to_s(:short) %> 
