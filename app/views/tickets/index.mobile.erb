@@ -1,0 +1,11 @@
+<div id="title">
+  <h2>All tickets 
+    <span><%= link_to 'fresh', fresh_tickets_url %></span>          
+    <span><%= link_to 'active', active_tickets_url %></span>
+  </h2>
+</div>
+
+<%= render :partial => @tickets %>
+
+
+<%= will_paginate @tickets %>

@@ -1,0 +1,6 @@
+<% div_for ticket, :class => 'row ticket_row' do %>
+
+  <h3><%= link_to ticket.key, ticket %></h3>
+  <h4><%= link_to ticket.subject.blank? ? ticket.key : ticket.subject, ticket %> </h4>
+  <p><%= time_ago_in_words ticket.created_at %> ago by <%= mail_to ticket.email, ticket.name %></p>
+<% end %>

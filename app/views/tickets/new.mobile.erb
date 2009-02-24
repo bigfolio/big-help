@@ -1,0 +1,78 @@
+<h2>New ticket</h2>
+
+<% form_for(@ticket) do |f| %>
+  <%= f.error_messages %>
+
+  <fieldset>
+    <legend>Subject</legend>
+    <p><%= f.text_field :subject %></p>
+  </fieldset>
+
+  <fieldset>
+    <legend>About you</legend>
+    <p>
+      <%= f.label :name, "Your name" %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :email, "Email address" %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :domain, "Domain name" %><br />
+      <%= f.text_field :domain %>
+    </p>
+  </fieldset>
+
+
+  <fieldset>
+    <legend>How can we help?</legend>
+    <p><%= f.check_box :urgent %> <%= f.label :urgent, 'this is an emergency', :class=>'emergency' %> <span class="tip">(site or email down)</span></p>
+    <p>
+      <%= f.label :category_id, 'Product or category' %><br />
+      
+      <%= f.collection_select(:category_id, Category.find(:all), :id, :name, {:include_blank => true},
+          {:onchange => remote_function(:update => 'faqs', :url => faqs_by_category_url, :with => "'id='+this.value")}) %>
+      
+      
+    </p>
+    <div id="faqs">
+      
+    </div>
+    
+  
+    <p>
+      <%= f.label :body, 'Details of your problem' %>
+      <%= f.text_area :body %>
+    </p>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Details</legend>
+    <p class="tip">Details help us diagnose your problem faster. When appropriate, please let us know your operating system, 
+      web browser, email client, and steps required to reproduce your problem.</p>
+    <p>
+    <%= f.label :os, 'Operating system' %><br />
+    <%= f.select(:os, ['Mac OS X','Windows XP','Windows Vista','iPhone','Other'], {:include_blank => true}) %></p>
+    <p><%= f.label :browser, 'Web browser' %><br />
+    <%= f.select(:os, ['Firefox','Internet Explorer','Safari','Other'], {:include_blank => true}) %>
+    </p>
+    <p>
+      <%= f.label :email_client, 'Email client' %><br />
+      <%= f.select(:email_client, ['Mac Mail','Outlook','Outlook Express','Thunderbird','Google Apps Webmail'], {:include_blank => true}) %>
+    </p>
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.text_field :password %>
+    </p>
+    
+  </fieldset>
+  
+  <p>
+    <%= f.submit "Submit my request" %>
+  </p>
+<% end %>

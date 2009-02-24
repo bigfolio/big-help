@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>BIG Help</title>
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=3.0; user-scalable=1;" />
+  <%= stylesheet_link_tag 'mobile.css' %>
+  <%= javascript_include_tag :defaults %>
+  <script type="text/javascript">
+    window.onload=function() {
+      window.scrollTo(0, 1);
+    };
+  </script>
+</head>
+<body>
+
+<div id="head"><h1>BIG Help Mobile</h1></div>
+
+<div id="nav">    
+    <ul class="big">
+      <li><%= link_to "New Ticket", new_ticket_url, :class=>"big_ticket" %></li>
+      <li><%= link_to "Contact", AppConfig['contact'], :class=>"big_contact" %></li>
+      <li><a href="#search" class="big_find">Search</a></li>
+    </ul>
+</div>
+<% if current_user %>
+<div id="staff_nav">
+  <ul class="big">
+    <li><%= link_to "Fresh tickets", fresh_tickets_url, :class=>"big_fresh" %></li>
+    <li><%= link_to "Active tickets", active_tickets_url, :class=>"big_active" %></li>
+    <li><%= link_to "All tickets", tickets_url, :class=>"big_all" %></li>
+  </ul>
+</div>
+<% end %>
+
+<%= yield %>
+
+<div id="search" class="row">
+  <h2>Find Your Ticket</h2>
+  <% form_tag(key_search_url, {:method => 'get'}) do %>
+    <%= text_field_tag :key, 'Ticket key', :size => 10 %>
+  <% end %>
+</div>
+
+<div id="staff_search">
+  <h2>Search Tickets</h2>
+  <% form_tag(tickets_url, {:method => 'get'}) do %>
+    <p><%= label :q, 'Search phrase' %><br />
+      <%= text_field_tag :q, 'Key / Name / Email', :size => 20 %></p>
+    
+    <p><%= label :start_on, 'Date range' %><br />
+	  <%= text_field_tag :start_on, h(params[:start_on]), :size=>10 %> to <br />
+	  <%= text_field_tag :end_on, h(params[:end_on]), :size=>10 %></p>
+	  
+	  <p><%= submit_tag "Search" %></p>
+  <% end %>
+</div>
+
+</body>

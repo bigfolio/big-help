@@ -1,10 +1,4 @@
 <% div_for message, :class => message.classes do %>
-
-  <% if message.user %>
-  <div class="avatar">
-    <%= link_to image_tag(message.user.avatar.url(:thumb)), message.user.avatar.url(:small), :rel => 'facebox' if message.user.avatar.file? %>
-  </div>
-  <% end %>
   <p class="timestamp">On <%= message.created_at.to_s(:short) %> 
     <%= message.user ? message.user.name : 'someone' %> 
     wrote:</p>

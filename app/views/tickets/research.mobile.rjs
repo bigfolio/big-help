@@ -1,0 +1,2 @@
+page.replace "ticket_#{@ticket.id}", :partial => 'ticket', :object => @ticket
+page.replace_html "status", :text => "Status: #{@ticket.state}"

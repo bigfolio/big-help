@@ -3,6 +3,8 @@ class TicketsController < ApplicationController
   
   before_filter :login_required, :except => [:new, :create]
   
+  has_mobile_fu
+  
   # GET /tickets
   # GET /tickets.xml
   def index
@@ -13,6 +15,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @tickets }
+      format.mobile
     end
   end
 
@@ -24,6 +27,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @ticket }
+      format.mobile
     end
   end
 
@@ -34,6 +38,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       # format.html { redirect_to(tickets_url) }
       format.js
+      format.mobile
     end
   end
   
@@ -64,6 +69,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @ticket }
+      format.mobile
     end
   end
 

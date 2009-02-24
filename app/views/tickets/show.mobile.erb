@@ -1,0 +1,43 @@
+<div class="row ticket_row">
+  <h2>Ticket <%=h @ticket.key %></h2>
+  <h3><%=h @ticket.subject %> <span>(<%= @ticket.category.name %>)</span></h3>
+</div>
+
+<div id="status">
+  <strong>Status: <%= @ticket.state %></strong>
+  <%= link_to_remote "I'm working on this", :url => research_ticket_url(@ticket) if @ticket.state == 'fresh' %>
+</div>
+
+<div class="row">
+  <p><%= @ticket.created_at.to_s(:short) %><br />
+     <%= mail_to @ticket.email, @ticket.name %><br />
+     <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %></p>
+</div>
+
+<div class="row">
+  <%=h @ticket.body %>
+  
+  <p><b>U:</b> <%=h @ticket.username %> / <b>P:</b> <%=h @ticket.password %></p>
+</div>
+
+
+<div class="row">
+  <h3>Messages</h3>
+  <%= '<p>No additional messages for this ticket</p>' if @ticket.messages.blank? %>
+  <%= render :partial => @ticket.messages %>
+</div>
+
+<div class="row">
+  <h3>Reply to this ticket</h3>
+
+  
+  <% form_for [@ticket, Message.new], :html => { :multipart => true } do |f| %>
+    <%= f.error_messages %>
+  
+    <%= f.text_area :body %>
+    
+    <p>
+      <%= f.submit "Submit reply" %>
+    </p>
+  <% end %>
+</div>

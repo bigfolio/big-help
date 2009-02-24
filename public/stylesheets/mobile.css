@@ -1,0 +1,56 @@
+body {background-color:#ffffff;color:#333333;font-family: Helvetica,sans-serif;}
+body,ul,li,table,tr,td {margin:0;padding:0;}
+img {border:0;}
+table,tr,td {border:0;border-collapse:collapse;border-spacing:0;vertical-align:top;}
+div,ul{padding:6px 3px;}
+table {margin-left:2px;}
+ul li {list-style:none;}
+small, .d {color:#aaaaaa;}
+a, .f small {color:#13819f;text-decoration:none;}
+a:active, a:hover, .b:active {text-decoration:underline;color:#aaaaaa;}
+p, h1, h2, h3, h4 {margin:0;}
+
+#head {
+	background:blue;
+	color:#fff;
+	padding:3px;
+}
+#head h1 {
+	font-weight:normal;
+}
+
+#nav, #staff_nav {
+	height:24px;
+	background:#333;
+	padding:0px 3px;
+}
+#title {
+	background:#eee;
+	border-bottom:1px solid #ccc;
+}
+
+
+div.row {
+	border-bottom: 1px solid #999;
+}
+div.ticket_row {
+	background:yellow;
+}
+
+ul.big {
+	padding:0;
+}
+ul.big li {
+	display:inline;
+	background:#333;
+	line-height:24px;
+	margin-right:12px;
+}
+
+ul.big a, ul.big a:link, ul.big a:visited {
+	color:#fff;
+}
+
+h2 span {
+	font-size:12px;
+}
