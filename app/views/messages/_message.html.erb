@@ -5,7 +5,7 @@
     <%= link_to image_tag(message.user.avatar.url(:thumb)), message.user.avatar.url(:small), :rel => 'facebox' if message.user.avatar.file? %>
   </div>
   <% end %>
-  <p class="timestamp">On <%= message.created_at.to_s(:short) %> 
+  <p class="timestamp">On <%= message.created_at.strftime('%a %m/%d at %I:%M%p %Z') %> 
     <%= message.user ? message.user.name : 'someone' %> 
     wrote:</p>
     

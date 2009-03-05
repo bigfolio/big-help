@@ -9,7 +9,7 @@
   <%= link_to_remote "I'm working on this", :url => research_ticket_url(@ticket) if @ticket.state == 'fresh' %>
 </div>
 <div class="ticket_body">
-  <p class="timestamp">On <%= @ticket.created_at.to_s(:short) %> <%= mail_to @ticket.email, @ticket.name %> of <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %> wrote:</p>
+  <p class="timestamp">On <%= @ticket.created_at.strftime('%a %m/%d at %I:%M%p %Z') %> <%= mail_to @ticket.email, @ticket.name %> of <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %> wrote:</p>
   <%=h @ticket.body %>
 
 <p><b>U:</b> <%=h @ticket.username %> / <b>P:</b> <%=h @ticket.password %></p>

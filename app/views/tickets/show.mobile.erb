@@ -9,7 +9,7 @@
 </div>
 
 <div class="row">
-  <p><%= @ticket.created_at.to_s(:short) %><br />
+  <p><%= @ticket.created_at.strftime('%a %m/%d at %I:%M%p %Z') %><br />
      <%= mail_to @ticket.email, @ticket.name %><br />
      <%= link_to @ticket.domain, @ticket.domain.match('http://') ? @ticket.domain : 'http://'+@ticket.domain %></p>
 </div>
