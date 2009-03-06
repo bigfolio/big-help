@@ -66,10 +66,7 @@
     <ul id="big">
       <li><%= link_to "New ticket", new_ticket_url, :class=>"big_ticket" %></li>
       <li><%= link_to "Contact us", AppConfig['contact'], :class=>"big_contact" %></li>
-      <li><span id="find_label"><a href="#" onclick="show_find()" class="big_find">Find your ticket</a></span>
-          <span id="find_form"><% form_tag(key_search_url, {:method => 'get'}) do %>
-            <%= text_field_tag :key, 'Ticket key', :size => 10 %>
-            <% end %></span></li>
+      <li><span id="find_label"><a href="javascript:;" onclick="show_find()" class="big_find">Find your ticket</a></span></li>
       <% if current_user %>
       <li><%= link_to "Fresh tickets", fresh_tickets_url, :class=>"big_fresh" %></li>
       <li><%= link_to "Active tickets", active_tickets_url, :class=>"big_active" %></li>
@@ -87,7 +84,13 @@
             <% end %></span></li>
       <% end %>
     </ul>
-  
+    <div id="find_form"><% form_tag(key_search_url, {:method => 'get'}) do %>
+      <%= text_field_tag :key, 'Ticket key', :size => 10 %>
+      <% end %>
+    </div>
+    
+    
+    
   </div>
   <div id="left">
     <%= yield %>
