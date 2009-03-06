@@ -272,12 +272,12 @@ a.big_ticket {
 a.big_find {
 	background: transparent url(../images/search.png) no-repeat top left;
 }
-span#find_form {
+div#find_form {
 	display:none;
 	line-height:48px;
 	padding-left:60px;
 }
-span#find_form input {
+div#find_form input {
 	font-size:1.5em;
 	font-weight:bold;
 	color:#999;
