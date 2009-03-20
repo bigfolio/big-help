@@ -12,6 +12,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.faqs_by_category '/help/faqs/:id', :controller => 'help', :action => 'faqs'
   
+  map.connect '/help/new', :controller => 'tickets', :action => 'new'
+  
   map.view_by_key '/help/view/:key', :controller => 'help', :action => 'view_by_key'
   map.key_search '/help/key_search', :controller => 'help', :action => 'search_by_key'
   map.search '/help/search', :controller => 'help', :action => 'search'
