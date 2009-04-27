@@ -3,7 +3,7 @@
     <span><%= ticket.key %> submitted <%= time_ago_in_words ticket.created_at %> ago 
       by <%= mail_to ticket.email, ticket.name %></span></h3>
   <ul class='ticket_info'>
-    <li>account: <%= link_to ticket.domain, ticket.domain.match('http://') ? ticket.domain : 'http://'+ticket.domain %></li>
+    <li>account: <%= link_to ticket.domain, ticket.domain.to_s.match('http://') ? ticket.domain : 'http://'+ticket.domain %></li>
     <% if ticket.category %><li><%= link_to ticket.category.name, ticket.category %></li><% end %>
     
     
