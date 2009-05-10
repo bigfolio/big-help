@@ -2,11 +2,28 @@ h1. Welcome to BIG Help
 
 Welcome to BIG Help. BIG Help is an open-source help ticket system that can be used by consumer-focused web companies. BIG Help is designed to be a simple (and free) alternative to online services such as "HelpSpot":http://www.userscape.com/products/helpspot/ and "Kayako":http://www.kayako.com/. 
 
-BIG Help is based on the support app we use at "BIG Folio":http://www.bigfolio.com and "NextProof":http://www.nextproof.com (we make stuff for photographers). 
+BIG Help is based on the support app we use at "BIG Folio":http://www.bigfolio.com and "NextProof":http://www.nextproof.com (we make stuff for photographers). It's worth noting that BIG Help is not a bug-tracking system like Lighthouse or Fog Bugz.
 
 h2. Current status
 
-The app is getting close to usable. I will be adding the email features next. 
+BIG Help is currently live and in production at BIG Folio. You can "see it in action on our help page":http://bighelp.bigfolio.com.
+
+h2. Features
+
+* Configurable categories 
+* Create categorized FAQs
+* Simple support form for customers
+* When a customer chooses the category of their request, FAQs from that category are presented (via AJAX)
+* Support requests are assigned a unique ticket "key"
+* Email confirmation sent to customer upon initial request
+* Email sent to all support staff (users) who choose to receive alerts for that ticket's category
+* Support staff can create replies to a ticket 
+* Ticket replies are emailed to the customer
+* Support staff can attach files to a reply. Files are available in-browser and attached to the email. 
+* Tickets have a state of "Fresh", "Active", and "Closed"
+* Support staff can upload an avatar 
+* Fairly robust search
+* Mobile views: mobile-friendly view is rendered when used on an iPhone (haven't tested other mobile devices)
 
 h2. Required gems
 
