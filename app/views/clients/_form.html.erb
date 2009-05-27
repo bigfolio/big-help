@@ -1,0 +1,77 @@
+<%= f.error_messages %>
+
+<fieldset>
+  <legend>General info</legend>
+  <p>
+    <%= f.label :name, "Name" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :business, "Business name" %><br />
+    <%= f.text_field :business %>
+  </p>
+  <p>
+    <%= f.label :email, "Email" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :domain, "Domain name" %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :template, "Template name" %><br />
+    <%= f.text_field :template %>
+  </p>
+</fieldset>
+
+<fieldset>
+  <legend>Server info</legend>
+  <p>
+    <%= f.label :server, "Server" %><br />
+    <%= f.text_field :server %>
+  </p>
+  <p>
+    <%= f.label :database_name, "DB name" %><br />
+    <%= f.text_field :database_name %>
+  </p>
+  <p>
+    <%= f.label :database_user, "DB user" %><br />
+    <%= f.text_field :database_user %>
+  </p>
+  <p>
+    <%= f.label :database_password, "DB password" %><br />
+    <%= f.text_field :database_password %>
+  </p>
+  <p>
+    <%= f.label :web_user, "FTP user" %><br />
+    <%= f.text_field :web_user %>
+  </p>
+  <p>
+    <%= f.label :web_password, "FTP password" %><br />
+    <%= f.text_field :web_password %>
+  </p>
+  <p>
+    <%= f.label :admin_user, "Admin user" %><br />
+    <%= f.text_field :admin_user %>
+  </p>
+  <p>
+    <%= f.label :admin_password, "Admin password" %><br />
+    <%= f.text_field :admin_password %>
+  </p>
+</fieldset>
+
+<fieldset>
+  <legend>Billing info</legend>
+  <p>
+    <%= f.label :monthly_fee, "Monthly fee" %><br />
+    $ <%= f.text_field :monthly_fee, :size=>4 %>
+  </p>
+  <p>
+    <%= f.label :signup_date, "Signup date" %><br />
+    <%= f.date_select :signup_date %>
+  </p>
+  <p>
+    <%= f.label :billing_date, "Billing date" %><br />
+    <%= f.date_select :billing_date %>
+  </p>
+</fieldset>

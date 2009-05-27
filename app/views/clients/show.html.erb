@@ -1,0 +1,12 @@
+<h2><%= @client.domain %> (<%= @client.name %>) <span><%= link_to 'Edit this client', edit_client_path(@client)  %>
+</span></h2>
+
+<% form_for(@client) do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+<% end %>
+
+<% content_for :onload do %>
+  $(":text").attr('readonly', true); 
+<% end %>

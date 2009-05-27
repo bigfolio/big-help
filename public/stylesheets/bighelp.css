@@ -1,28 +1,8 @@
-/* These are the basic reset fonts styles (courtesy Yahoo! YUI) */
-html{color:#000;background:#DDD;height:100%;}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
-table{border-collapse:collapse;border-spacing:0;}
-fieldset,img{border:0;}
-address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
-li{list-style:none;}
-caption,th{text-align:left;}
-h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
-q:before,q:after{content:'';}
-abbr,acronym {border:0;font-variant:normal;}
-sup {vertical-align:text-top;}
-sub {vertical-align:text-bottom;}
-input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
-input,textarea,select{*font-size:100%;}
-legend{color:#000;}
-body {font:13px/1.231 'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;*font-size:small;*font:x-small;}
-table {font-size:inherit;font:100%;}
-pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
-a, a:link, a:visited {color:#0066CC;}
-/* End of reset fonts */
+
 
 
 body#help {
-	background: #DDD url(../images/site_bg.png) repeat-x fixed top left;
+	background: #fff;
 }
 div.clear {
 	clear:both;
@@ -36,17 +16,13 @@ div#container {
 	border-right:3px solid #EEE;
 }
 div#header {
-	width:930px;
-	margin:0 5px;
-	height:70px;
+	background:#eef4f4;
+	margin-bottom:40px;
 }
 div#header h1 {
 	color:#fff;
 	line-height:50px;
-	margin:0 12px;
 	font-size:2.4em;
-	-x-system-font:none;
-	font-stretch:normal;
 }
 div#header h1 a, div#header h1 a:link, div#header h1 a:visited {
 	color:#fff;
@@ -54,8 +30,10 @@ div#header h1 a, div#header h1 a:link, div#header h1 a:visited {
 	text-decoration: none;
 }
 div#nav {
+
+}
+div#nav ul {
 	float:right;
-	margin:12px 12px 0 0;
 }
 div#nav li {
 	display: block;
@@ -76,8 +54,8 @@ div#splash {
 }
 
 div#left {
-	width:600px;
-	margin:0 12px 0 24px;
+
+
 }
 div#left p {
 	padding-bottom:6px;
@@ -86,7 +64,6 @@ div#left h1, div#left h2 {
 	color:#333;
 	font-size:1.5em;
 	font-weight:bold;
-	line-height:2em;
 }
 div#left h2 span {
 	font-size:12px;
@@ -248,9 +225,10 @@ div#left ul.ticket_info li a {
 }
 
 div#right {
-	width:240px;
-	float:right;
-	padding:24px 0 0 12px;
+
+}
+ul#big li {
+	list-style-type: none;
 }
 ul#big a, ul#big a:link, ul#big a:visited {
 	text-decoration: none;
@@ -272,6 +250,10 @@ a.big_ticket {
 a.big_find {
 	background: transparent url(../images/search.png) no-repeat top left;
 }
+a.big_clients {
+	background: transparent url(../images/clients.png) no-repeat top left;
+}
+
 div#find_form {
 	display:none;
 	line-height:48px;
@@ -318,18 +300,34 @@ div.pagination {
 	color:#999;
 }
 
+div.even {
+	background:#efe;
+}
+
+div.client {
+	border-bottom:1px solid #ccc;
+	clear:both;
+}
+div.client h3 {
+	margin:0 0 0 5px;
+}
+div.client ul, div#left div.client ul {
+	float:right;
+	margin-right:5px;
+}
+div.client li {
+	list-style-type: none;
+	display:inline;
+	margin-left:10px;
+}
+div.client li a {
+	color:red;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration: none;
+}
 
 div#footer {
-	background: #fff;
-	width:930px;
-	height:40px;
-	margin:0 auto;
-	color:#666;
-	font-size: .8em;
-	text-align:center;
-	border-left:3px solid #EEE;
-	border-right:3px solid #EEE;
-	border-bottom:3px solid #EEE;	
 }
 div#footer p {
 	padding:6px 12px;

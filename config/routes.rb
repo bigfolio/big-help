@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :clients
+
+  map.resources :clients
+
   
   map.root :controller => 'help'
   

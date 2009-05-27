@@ -1,0 +1,10 @@
+<h2>Edit <%= @client.domain %></h2>
+
+<% form_for(@client) do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Update" %> or <%= link_to 'go back', clients_path %>
+  </p>
+
+<% end %>

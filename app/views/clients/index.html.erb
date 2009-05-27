@@ -1,0 +1,13 @@
+<h2>All clients <span><%= link_to 'New client', new_client_path %></span></h2>
+
+<% for client in @clients %>
+  <% div_for(client, :class => cycle('odd','even')) do %>
+  <ul>
+    <li><%= link_to 'Edit', edit_client_path(client)  %></li>
+    <li><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></li>
+  </ul>
+  <h3><%= link_to "#{client.name} (#{client.domain})", client_path(client)  %></h3>
+  <% end %>
+<% end %>
+
+

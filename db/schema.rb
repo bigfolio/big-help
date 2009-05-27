@@ -9,10 +9,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090221212303) do
+ActiveRecord::Schema.define(:version => 20090527194358) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "help_url",   :default => "http://www.bigfolio.com/help"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.string   "business"
+    t.string   "email"
+    t.string   "template"
+    t.string   "server"
+    t.string   "domain"
+    t.string   "database_name"
+    t.string   "database_user"
+    t.string   "database_password"
+    t.string   "web_user"
+    t.string   "web_password"
+    t.string   "admin_user"
+    t.string   "admin_password"
+    t.decimal  "monthly_fee",       :precision => 10, :scale => 2
+    t.date     "signup_date"
+    t.date     "billing_date"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,6 +98,11 @@ ActiveRecord::Schema.define(:version => 20090221212303) do
     t.datetime "updated_at"
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
+    t.datetime "avatar_updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_uploaded_at"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

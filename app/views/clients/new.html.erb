@@ -1,0 +1,12 @@
+<h2>New client</h2>
+
+<% form_for(@client) do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Create client" %> or <%= link_to 'go back', clients_path %>
+  </p>
+  
+<% end %>
+
+

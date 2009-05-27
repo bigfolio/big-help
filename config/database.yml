@@ -2,7 +2,7 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: mysql
-  database: bighelp_dev
+  database: bighelp_wz
   user: root
   password: 
   timeout: 5000
