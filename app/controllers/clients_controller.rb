@@ -1,4 +1,7 @@
 class ClientsController < ApplicationController
+
+  before_filter :login_required
+
   # GET /clients
   # GET /clients.xml
   def index

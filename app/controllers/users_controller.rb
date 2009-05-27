@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
+  # include AuthenticatedSystem
   
+  before_filter :login_required, :only => [:edit]
+
+  before_filter :bypass, :only => [:new, :create]
 
   # render new.rhtml
   def new
@@ -47,4 +50,13 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  
+  protected
+  
+    def bypass
+      
+      redirect_to root_path
+    end
+  
 end
