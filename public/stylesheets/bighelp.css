@@ -21,6 +21,9 @@ a, a:link, a:visited {color:#0066CC;}
 /* End of reset fonts */
 
 
+
+
+
 body#help {
 	background: #DDD url(../images/site_bg.png) repeat-x fixed top left;
 }
@@ -334,3 +337,32 @@ div#footer {
 div#footer p {
 	padding:6px 12px;
 }
+
+
+
+
+
+/************************************************/
+/* Email alerts
+/************************************************/
+#notify {
+	background:#FFFF88;
+	border:3px solid #C79810;
+	padding:0 10px;
+	font-size:120%;
+}
+#notify h2, #notify h3 {
+	text-align: center;
+}
+#notify strong { 
+	font-weight: bold;
+	color:#B02B2C;
+}
+
+
+
+
+
+
+
+
