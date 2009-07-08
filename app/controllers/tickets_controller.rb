@@ -4,6 +4,7 @@ class TicketsController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
   
   has_mobile_fu
+  has_sms_fu
   
   # GET /tickets
   # GET /tickets.xml
@@ -88,6 +89,11 @@ class TicketsController < ApplicationController
         flash[:notice] = 'Ticket was successfully created.'
         format.html { redirect_to(view_by_key_url(@ticket.key)) }
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
+        
+        # Send a text message
+        deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "Your support ticket has been received.") unless @ticket.mobile_number.blank?
+        
+        
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @ticket.errors, :status => :unprocessable_entity }

@@ -1,4 +1,6 @@
 class Ticket < ActiveRecord::Base
+
+  
   
   belongs_to :category
   belongs_to :user
@@ -11,6 +13,7 @@ class Ticket < ActiveRecord::Base
   state :closed
   
   before_create :generate_key
+  after_create  :strip_mobile
   after_create  :send_alerts
 
   event :research do 
@@ -36,12 +39,16 @@ class Ticket < ActiveRecord::Base
   
   protected
   
+  def strip_mobile
+    self.mobile_number.gsub!(/[^0-9]/,"") unless self.mobile_number.blank?
+    self.save
+  end
+  
   def send_alerts
     users = User.find(:all)
     users.each { |u| TicketMailer.deliver_ticket_alert(u, self) if u.categories.include?(self.category) }
     
     TicketMailer.deliver_ticket_confirmation(self)
-    
   end
   
   def generate_key

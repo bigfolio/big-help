@@ -53,6 +53,13 @@ class MessagesController < ApplicationController
         if current_user
           @ticket.close! if params[:close_ticket]
           format.html { redirect_to(@ticket) }
+          
+          # Send a text message to the customer
+          # This should really be done in the model, but sms-fu doesn't seem to like that 
+          url = view_by_key_url(@ticket.key, :host => 'bighelp.bigfolio.com')
+          deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "We have an update to your support request (#{@ticket.key}). Please visit #{url}") unless @ticket.mobile_number.blank?
+          
+          
         else
           format.html { redirect_to(view_by_key_url(@ticket.key)) }
         end

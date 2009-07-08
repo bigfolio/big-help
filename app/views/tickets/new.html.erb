@@ -22,6 +22,11 @@
       <%= f.label :domain, "Domain name" %><br />
       <%= f.text_field :domain %>
     </p>
+    <p>
+      <%= f.label :mobile_number, "Mobile phone" %><br />
+      <%= f.text_field :mobile_number %>
+    </p>
+    <p><%= carrier_select('ticket[carrier_name]', "Please choose your carrier") %></p>
   </fieldset>
 
 
