@@ -8,6 +8,7 @@ class TicketMailer < ActionMailer::Base
     subject       "New support request (#{ticket.key}) from #{ticket.name}"
     body          :ticket => ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
   end
   
   def ticket_update(user, message, ticket)
@@ -19,6 +20,7 @@ class TicketMailer < ActionMailer::Base
     body[:message] = message
     body[:ticket]  = ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
   end
   
   def ticket_update_with_attachment(user, message, ticket)
@@ -30,6 +32,7 @@ class TicketMailer < ActionMailer::Base
     body[:message] = message
     body[:ticket]  = ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
     attachment(:content_type => message.attachment_content_type,
         :filename => message.attachment_file_name,
         :body => File.read(message.attachment.path))
@@ -44,6 +47,7 @@ class TicketMailer < ActionMailer::Base
     body[:message] = message
     body[:ticket]  = ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
   end
   
   def ticket_reply_with_attachment(message, ticket) 
@@ -55,6 +59,7 @@ class TicketMailer < ActionMailer::Base
     body[:message] = message
     body[:ticket]  = ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
     attachment(:content_type => message.attachment_content_type,
         :filename => message.attachment_file_name,
         :body => File.read(message.attachment.path))
@@ -68,6 +73,7 @@ class TicketMailer < ActionMailer::Base
     subject       "Your support request [#{ticket.key}] has been recieved"
     body          :ticket => ticket
     content_type  "text/html"
+    headers       "return-path" => "help@bigfolio.com"
   end
   
 end
