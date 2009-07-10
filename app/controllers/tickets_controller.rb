@@ -85,15 +85,12 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(params[:ticket])
 
     respond_to do |format|
-      if @ticket.save
+      if verify_recaptcha() && @ticket.save 
         flash[:notice] = 'Ticket was successfully created.'
         format.html { redirect_to(view_by_key_url(@ticket.key)) }
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
-        
         # Send a text message
         deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "Your support ticket has been received.") unless @ticket.mobile_number.blank?
-        
-        
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @ticket.errors, :status => :unprocessable_entity }
