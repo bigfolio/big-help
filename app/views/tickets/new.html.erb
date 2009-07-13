@@ -1,3 +1,19 @@
+<% content_for :onload do %>
+  $('#ticket_carrier_name').change(function(){
+    val = $('#ticket_carrier_name').val();
+    if (val != '' && val != 'Please choose your carrier') {
+      $('#ticket_mobile_number').attr('disabled', false);
+      $('#ticket_mobile_number').val('Mobile number with area code');
+      $('#ticket_mobile_number').focus(function() {
+        this.value = this.value == 'Mobile number with area code' ? '' : this.value;
+      });
+    } else {
+      $('#ticket_mobile_number').val('');
+      $('#ticket_mobile_number').attr('disabled', true);
+    }
+  });
+<% end %>
+
 <h2>New ticket</h2>
 
 <% form_for(@ticket) do |f| %>
@@ -23,12 +39,13 @@
       <%= f.text_field :domain %>
     </p>
     <p>
-      <%= f.label :mobile_number, "Mobile phone" %> <br />
-      <%= f.text_field :mobile_number %>
+      <%= f.label :mobile_number, "Mobile phone" %><br />
+      <span class="tip">Enter your mobile carrier and number<br />
+        we'll send a text message when we reply to your ticket</span><br />
+      <%= carrier_select('ticket[carrier_name]', "Please choose your carrier") %> 
     </p>
     <p>
-      <%= carrier_select('ticket[carrier_name]', "Please choose your carrier") %> <br />
-      <span class="tip">You'll get a text message when we reply to your ticket</span>
+      <%= f.text_field :mobile_number, :disabled => 'disabled' %>      
     </p>
   </fieldset>
 
