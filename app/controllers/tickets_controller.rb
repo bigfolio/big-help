@@ -90,7 +90,7 @@ class TicketsController < ApplicationController
         format.html { redirect_to(view_by_key_url(@ticket.key)) }
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
         # Send a text message
-        deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "Your support ticket has been received.") unless @ticket.mobile_number.blank? || @ticket.mobile_number == 'Mobile number with area code'
+        deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "Your support ticket has been received.") unless @ticket.mobile_number.blank?
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @ticket.errors, :status => :unprocessable_entity }
