@@ -85,7 +85,7 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(params[:ticket])
 
     respond_to do |format|
-      if verify_recaptcha() && @ticket.save 
+      if @ticket.save && verify_recaptcha()
         flash[:notice] = 'Ticket was successfully created.'
         format.html { redirect_to(view_by_key_url(@ticket.key)) }
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }

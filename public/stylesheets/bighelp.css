@@ -339,8 +339,22 @@ div#footer p {
 }
 
 
-
-
+/************************************************/
+/* Errors
+/************************************************/
+#errorExplanation {
+	background:yellow;
+	border:3px solid orange;
+	padding:10px;
+	margin-bottom:20px;
+}
+div#left div.fieldWithErrors label {
+	font-weight:bold;
+	color:red;
+}
+div#left div.fieldWithErrors input {
+	border:3px solid red;
+}
 
 /************************************************/
 /* Email alerts
