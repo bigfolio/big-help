@@ -99,7 +99,6 @@
         <%= yield :sidebar %>
         <ul id="big">
           <li><%= link_to "New ticket", new_ticket_url, :class=>"big_ticket" %></li>
-          <li><%= link_to "Contact us", AppConfig['contact'], :class=>"big_contact" %></li>
           <li><span id="find_label"><a href="javascript:;" onclick="show_find()" class="big_find">Find your ticket</a></span></li>
           <% if current_user %>
           <li><%= link_to "Fresh tickets", fresh_tickets_url, :class=>"big_fresh" %></li>
