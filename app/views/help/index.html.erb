@@ -1,7 +1,16 @@
 <% content_for :main do %>
-<div id="splash">
-  <img class="alignnone size-full wp-image-739" title="Support Header" src="http://bigfolio.com/wp-content/uploads/2009/02/support.jpg" alt="Support Header" width="880" height="250" />
+<div class="grid_12" id="main">
+  <div class="grid_6 alpha">
+    <h1>The Best Support in The Industry</h1>
+      
+    <h2><%= link_to "Submit a new ticket", new_ticket_url, :class=>"splash_ticket" %></h2>
+  </div>
+  <div id="splash" class="grid_6 omega">
+    <%= image_tag 'splash.jpg' %>
+  </div>
+  <div class="clear"></div>
 </div>
+<div class="clear"></div>
 <% end %>
 <h2>Guidelines for Submitting a Support Ticket</h2>
 <p>At BIG Folio, our goal is to provide you with the best support in the industry. Our online support center allows us to effectively handle your requests. Please submit a ticket any time you need us to take action. For example:</p>
