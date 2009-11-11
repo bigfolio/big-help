@@ -104,6 +104,7 @@
           <li><%= link_to "Fresh tickets", fresh_tickets_url, :class=>"big_fresh" %></li>
           <li><%= link_to "Active tickets", active_tickets_url, :class=>"big_active" %></li>
           <li><%= link_to "All tickets", tickets_url, :class=>"big_all" %></li>
+          <li><%= link_to "FAQs", faqs_url, :class=>'big_faqs' %></li>
           <li><span id="search_label"><a href="#" onclick="show_search()" class="big_search">Search tickets</a></span>
               <span id="search_form"><% form_tag(tickets_url, {:method => 'get'}) do %>
                 <%= label :q, 'Search phrase' %>
