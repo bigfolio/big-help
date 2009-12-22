@@ -56,7 +56,7 @@ class MessagesController < ApplicationController
           
           # Send a text message to the customer
           # This should really be done in the model, but sms-fu doesn't seem to like that 
-          url = view_by_key_url(@ticket.key, :host => 'bighelp.bigfolio.com')
+          url = view_by_key_url(@ticket.key, :host => 'help.aphotofolio.com')
           deliver_sms(@ticket.mobile_number.gsub(/[^0-9]/,""), @ticket.carrier_name, "We have an update to your support request (#{@ticket.key}). Please visit #{url}") unless @ticket.mobile_number.blank?
           
           

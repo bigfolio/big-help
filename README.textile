@@ -6,7 +6,7 @@ BIG Help is based on the support app we use at "BIG Folio":http://www.bigfolio.c
 
 h2. Current status
 
-BIG Help is currently live and in production at BIG Folio. You can "see it in action on our help page":http://bighelp.bigfolio.com.
+BIG Help is currently live and in production at BIG Folio. You can "see it in action on our help page":http://help.aphotofolio.com.
 
 h2. Features
 
