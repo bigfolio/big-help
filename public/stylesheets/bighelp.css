@@ -9,7 +9,7 @@ div.clear {
 }
 
 #header_container {
-	margin-top:50px;
+	margin-top:10px;
 }
 
 #main {
@@ -92,10 +92,6 @@ div#left .tip {
 	font-size:.8em;
 	margin-right:12px;
 }
-
-
-
-
 div#facebox h2 {
 	color:#0066CC;
 	font-size:1.5em;
