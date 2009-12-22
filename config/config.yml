@@ -1,6 +1,6 @@
 # Some basic info about your company
 company_name: BIG Folio and NextProof
-from_email: help@bigfolio.com
+from_email: help@aphotofolio.com
 support_phone: 805-504-1126
 
 # Your custom field label
@@ -10,12 +10,12 @@ custom_label: Dog or cat?
 customer_attachments: false
 
 # Where does your contact link go?
-contact: http://www.bigfolio.com/contact
+contact: http://www.www.aphotofolio.com/contact
 
 # External links for the top nav section
 nav_links:
-    - website designs: http://www.bigfolio.com/website-designs
-    - company: http://www.bigfolio.com/about
-    - testimonials: http://www.bigfolio.com/testimonials
-    - contact: http://www.bigfolio.com/contact
+    - website designs: http://www.www.aphotofolio.com/website-designs
+    - company: http://www.www.aphotofolio.com/about
+    - testimonials: http://www.www.aphotofolio.com/testimonials
+    - contact: http://www.www.aphotofolio.com/contact
     - blog: http://bfstop.bigfolioblog.com/

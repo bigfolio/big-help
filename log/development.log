@@ -2245,14 +2245,14 @@ Completed in 52ms (View: 20, DB: 2) | 200 OK [http://localhost/signup]
 
 
 Processing UsersController#create (for 127.0.0.1 at 2009-02-18 13:30:38) [POST]
-  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"df8a9d2f4ed1acfb4455de5f183d68f0d931108e", "user"=>{"password_confirmation"=>"mazagine", "password"=>"mazagine", "login"=>"erik", "email"=>"erik@bigfolio.com"}}
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"df8a9d2f4ed1acfb4455de5f183d68f0d931108e", "user"=>{"password_confirmation"=>"mazagine", "password"=>"mazagine", "login"=>"erik", "email"=>"erik@www.aphotofolio.com"}}
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
   [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
   [4;35;1mUser Exists (12.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'erik') LIMIT 1[0m
-  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'erik@bigfolio.com') LIMIT 1[0m
-  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `remember_token`, `login`, `email`) VALUES('', '91a9a73c93982fe5eb1f900a68702d26801ef58e', '2009-02-18 21:30:38', 'f81f103eff04f75eb0564c8e48a364616f7b0a42', NULL, '2009-02-18 21:30:38', NULL, 'erik', 'erik@bigfolio.com')[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'erik@www.aphotofolio.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `remember_token`, `login`, `email`) VALUES('', '91a9a73c93982fe5eb1f900a68702d26801ef58e', '2009-02-18 21:30:38', 'f81f103eff04f75eb0564c8e48a364616f7b0a42', NULL, '2009-02-18 21:30:38', NULL, 'erik', 'erik@www.aphotofolio.com')[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
 Redirected to /
 Completed in 61ms (DB: 15) | 302 Found [http://localhost/users]
@@ -2279,7 +2279,7 @@ Rendering help/index
 
 
 ActionView::TemplateError (undefined local variable or method `current_user' for #<ActionView::Base:0x25fe6f8>) on line #24 of app/views/layouts/application.html.erb:
-21:         <li><%= link_to "Help articles", "http://www.bigfolio.com/help" %></li>
+21:         <li><%= link_to "Help articles", "http://www.www.aphotofolio.com/help" %></li>
 22:         <li><%= link_to "New ticket", new_ticket_url %></li>
 23:         <li><%= link_to "FAQs", faqs_url %></li>
 24:         <% if current_user %>
@@ -2826,8 +2826,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"
@@ -4818,8 +4818,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"
@@ -14823,8 +14823,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"
@@ -15088,8 +15088,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"
@@ -15353,8 +15353,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"
@@ -15618,8 +15618,8 @@ Function body:           def _run_erb_app47views47layouts47application46html46er
 
 
 
-; @output_buffer.concat(( link_to "BIG Folio", "http://www.bigfolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
-; @output_buffer.concat(( link_to "Help articles", "http://www.bigfolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "BIG Folio", "http://www.www.aphotofolio.com" ).to_s); @output_buffer.concat "</li>\n        <li>"
+; @output_buffer.concat(( link_to "Help articles", "http://www.www.aphotofolio.com/help" ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "New ticket", new_ticket_url ).to_s); @output_buffer.concat "</li>\n        <li>"
 ; @output_buffer.concat(( link_to "FAQs", faqs_url ).to_s); @output_buffer.concat "</li>\n        "
 ;  if current_user ; @output_buffer.concat "\n        <li>"

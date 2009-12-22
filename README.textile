@@ -2,7 +2,7 @@ h1. Welcome to BIG Help
 
 Welcome to BIG Help. BIG Help is an open-source help ticket system that can be used by consumer-focused web companies. BIG Help is designed to be a simple (and free) alternative to online services such as "HelpSpot":http://www.userscape.com/products/helpspot/ and "Kayako":http://www.kayako.com/. 
 
-BIG Help is based on the support app we use at "BIG Folio":http://www.bigfolio.com and "NextProof":http://www.nextproof.com (we make stuff for photographers). It's worth noting that BIG Help is not a bug-tracking system like Lighthouse or Fog Bugz.
+BIG Help is based on the support app we use at "BIG Folio":http://www.www.aphotofolio.com and "NextProof":http://www.nextproof.com (we make stuff for photographers). It's worth noting that BIG Help is not a bug-tracking system like Lighthouse or Fog Bugz.
 
 h2. Current status
 

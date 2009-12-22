@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20090708221732) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "help_url",   :default => "http://www.bigfolio.com/help"
+    t.string   "help_url",   :default => "http://www.www.aphotofolio.com/help"
   end
 
   create_table "faqs", :force => true do |t|
