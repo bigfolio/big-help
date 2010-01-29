@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090708221732) do
+ActiveRecord::Schema.define(:version => 20100129211845) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "help_url",   :default => "http://www.www.aphotofolio.com/help"
+    t.string   "help_url",   :default => "http://www.bigfolio.com/help"
   end
 
   create_table "faqs", :force => true do |t|
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20090708221732) do
     t.datetime "updated_at"
     t.datetime "attachment_updated_at"
     t.integer  "ticket_id"
+    t.string   "name"
   end
 
   create_table "tickets", :force => true do |t|
