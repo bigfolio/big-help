@@ -66,7 +66,7 @@
     
   
     <p>
-      <%= f.label :body, 'Details of your problem' %>
+      <%= f.label :body, 'Details of your problem' %><br />
       <%= f.text_area :body %>
     </p>
   </fieldset>
@@ -84,16 +84,7 @@
     <p>
       <%= f.label :email_client, 'Email client' %><br />
       <%= f.select(:email_client, ['Mac Mail','Outlook','Outlook Express','Thunderbird','Google Apps Webmail'], {:include_blank => true}) %>
-    </p>
-    <p>
-      <%= f.label :username %><br />
-      <%= f.text_field :username %>
-    </p>
-    <p>
-      <%= f.label :password %><br />
-      <%= f.text_field :password %>
-    </p>
-    
+    </p>    
   </fieldset>
   
       <%= recaptcha_tags %>

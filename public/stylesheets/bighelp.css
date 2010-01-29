@@ -68,7 +68,7 @@ div#left li {
 div#left fieldset {
 	width:400px;
 	background:#eee;
-	padding: 12px 0 0 12px;
+	padding: 12px 0 6px 12px;
 	margin-bottom:24px;
 }
 div#left legend {
@@ -221,6 +221,10 @@ a.big_ticket {
 a.big_find {
 	background: transparent url(../images/search.png) no-repeat top left;
 }
+a.big_faqs {
+	background: transparent url(../images/faqs.png) no-repeat top left;
+}
+
 div#find_form {
 	display:none;
 	line-height:48px;
