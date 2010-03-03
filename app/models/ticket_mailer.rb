@@ -70,7 +70,7 @@ class TicketMailer < ActionMailer::Base
     recipients    ticket.email
     from          "BIG Folio Help <help@bigfolio.com>"
     reply_to      "BIG Folio Help <help@bigfolio.com>"
-    subject       "Your support request [#{ticket.key}] has been recieved"
+    subject       "Your support request [#{ticket.key}] has been received"
     body          :ticket => ticket
     content_type  "text/html"
     headers       "return-path" => "help@bigfolio.com"
