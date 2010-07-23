@@ -3,7 +3,8 @@ class TicketsController < ApplicationController
   
   before_filter :login_required, :except => [:new, :create]
   
-  has_mobile_fu
+  before_filter :adjust_format_for_phones
+  
   has_sms_fu
   
   # GET /tickets

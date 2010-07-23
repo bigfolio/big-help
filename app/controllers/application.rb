@@ -10,6 +10,17 @@ class ApplicationController < ActionController::Base
   
   include AuthenticatedSystem
   
+  
+  def adjust_format_for_phones
+    # request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]
+    request.format = case request.env["HTTP_USER_AGENT"]
+    when /iPod|iPhone|Android|Blackberry/i 
+      'mobile'
+    else
+      'html'
+    end
+  end
+  
   # See ActionController::Base for details 
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
