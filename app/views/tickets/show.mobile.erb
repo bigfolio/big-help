@@ -16,7 +16,6 @@
 
 <div class="row">
   <%=h @ticket.body %>
-  
   <p><b>U:</b> <%=h @ticket.username %> / <b>P:</b> <%=h @ticket.password %></p>
 </div>
 
@@ -29,15 +28,10 @@
 
 <div class="row">
   <h3>Reply to this ticket</h3>
-
-  
   <% form_for [@ticket, Message.new], :html => { :multipart => true } do |f| %>
     <%= f.error_messages %>
-  
     <%= f.text_area :body %>
-    
-    <p>
-      <%= f.submit "Submit reply" %>
-    </p>
+    <p><%= check_box_tag :close_ticket %> <label for="close_ticket">Close this ticket</label></p>
+    <p><%= f.submit "Submit reply" %></p>
   <% end %>
 </div>
