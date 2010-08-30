@@ -1,6 +1,7 @@
 require 'chronic'
 class TicketsController < ApplicationController
   
+  before_filter :redirect_to_new_support
   before_filter :login_required, :except => [:new, :create]
   
   has_mobile_fu

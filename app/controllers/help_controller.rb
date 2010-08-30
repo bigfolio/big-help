@@ -1,5 +1,7 @@
 class HelpController < ApplicationController
   
+  before_filter :redirect_to_new_support
+  
   # All the actions here are for the customer view, so no authentication required
   
   def index

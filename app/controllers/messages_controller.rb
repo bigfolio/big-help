@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-
+  before_filter :redirect_to_new_support
   before_filter :login_required, :except => [:create]
 
   # GET /messages
