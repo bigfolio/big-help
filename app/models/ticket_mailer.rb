@@ -1,5 +1,12 @@
 class TicketMailer < ActionMailer::Base
   
+  def receive(email)
+    key = email.subject.match(/\[\w{8}\]/)[0][1,8]
+    if ticket = Ticket.find_by_key(key)
+      
+    end
+  end
+  
   def ticket_alert(user, ticket)
     # Sent to staff when ticket is submitted
     recipients    user.email
