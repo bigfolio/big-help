@@ -66,13 +66,14 @@ class TicketsController < ApplicationController
   # GET /tickets/new
   # GET /tickets/new.xml
   def new
-    @ticket = Ticket.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @ticket }
-      format.mobile
-    end
+    redirect_to "http://support.bigfolio.com/anonymous_requests/new", :status => 301
+    # @ticket = Ticket.new
+    # 
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.xml  { render :xml => @ticket }
+    #   format.mobile
+    # end
   end
 
   # GET /tickets/1/edit
